@@ -15,6 +15,8 @@
 		F410CAAF20D0AF95003C045A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F410CAAE20D0AF95003C045A /* main.m */; };
 		F410CAB920D0AF95003C045A /* ProductDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F410CAB820D0AF95003C045A /* ProductDemoTests.m */; };
 		F410CAC420D0AF95003C045A /* ProductDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F410CAC320D0AF95003C045A /* ProductDemoUITests.m */; };
+		F410CAD420D0B290003C045A /* IconUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = F410CAD220D0B290003C045A /* IconUtil.m */; };
+		F410CAD820D0B598003C045A /* NSString+ZDUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = F410CAD720D0B598003C045A /* NSString+ZDUtil.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,10 @@
 		F410CABF20D0AF95003C045A /* ProductDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProductDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F410CAC320D0AF95003C045A /* ProductDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProductDemoUITests.m; sourceTree = "<group>"; };
 		F410CAC520D0AF95003C045A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F410CAD220D0B290003C045A /* IconUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IconUtil.m; sourceTree = "<group>"; };
+		F410CAD320D0B290003C045A /* IconUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IconUtil.h; sourceTree = "<group>"; };
+		F410CAD620D0B598003C045A /* NSString+ZDUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+ZDUtil.h"; sourceTree = "<group>"; };
+		F410CAD720D0B598003C045A /* NSString+ZDUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+ZDUtil.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +107,8 @@
 		F410CA9E20D0AF92003C045A /* ProductDemo */ = {
 			isa = PBXGroup;
 			children = (
+				F410CAD520D0B569003C045A /* Category */,
+				F410CAD120D0B27C003C045A /* Tools */,
 				F410CA9F20D0AF92003C045A /* AppDelegate.h */,
 				F410CAA020D0AF92003C045A /* AppDelegate.m */,
 				F410CAA220D0AF92003C045A /* ViewController.h */,
@@ -130,6 +138,24 @@
 				F410CAC520D0AF95003C045A /* Info.plist */,
 			);
 			path = ProductDemoUITests;
+			sourceTree = "<group>";
+		};
+		F410CAD120D0B27C003C045A /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				F410CAD320D0B290003C045A /* IconUtil.h */,
+				F410CAD220D0B290003C045A /* IconUtil.m */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		F410CAD520D0B569003C045A /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				F410CAD620D0B598003C045A /* NSString+ZDUtil.h */,
+				F410CAD720D0B598003C045A /* NSString+ZDUtil.m */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,6 +288,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F410CAD420D0B290003C045A /* IconUtil.m in Sources */,
+				F410CAD820D0B598003C045A /* NSString+ZDUtil.m in Sources */,
 				F410CAA420D0AF92003C045A /* ViewController.m in Sources */,
 				F410CAAF20D0AF95003C045A /* main.m in Sources */,
 				F410CAA120D0AF92003C045A /* AppDelegate.m in Sources */,
