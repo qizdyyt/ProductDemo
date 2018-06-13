@@ -8,7 +8,7 @@
 
 #import "IconUtil.h"
 #import <CoreText/CoreText.h>
-#import "NSString+ZDUtil.h"
+#import "NSString+Fmt.h"
 
 static NSString *const kDefaultFontFileName = @"EMIconDefault.ttf";
 

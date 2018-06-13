@@ -1,15 +1,14 @@
 //
-//  NSString+ZDUtil.m
+//  NSString+Fmt.m
 //  ProductDemo
 //
 //  Created by qizd on 2018/6/13.
 //  Copyright © 2018年 qizd. All rights reserved.
 //
 
-#import "NSString+ZDUtil.h"
+#import "NSString+Fmt.h"
 
-@implementation NSString (ZDUtil)
-
+@implementation NSString (Fmt)
 
 + (NSString *)Null2EmptyStr:(id)myVal {
     
