@@ -19,6 +19,14 @@
 		F410CADB20D0C788003C045A /* NSString+Fmt.m in Sources */ = {isa = PBXBuildFile; fileRef = F410CADA20D0C788003C045A /* NSString+Fmt.m */; };
 		F410CADE20D0C8C0003C045A /* NSString+JudgeType.m in Sources */ = {isa = PBXBuildFile; fileRef = F410CADD20D0C8C0003C045A /* NSString+JudgeType.m */; };
 		F410CAE120D0C94E003C045A /* DeviceInfoUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = F410CAE020D0C94E003C045A /* DeviceInfoUtil.m */; };
+		F410CAE520D0FA60003C045A /* DemoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F410CAE320D0FA60003C045A /* DemoListViewController.m */; };
+		F410CAE620D0FA60003C045A /* DemoListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F410CAE420D0FA60003C045A /* DemoListViewController.xib */; };
+		F4DBE0E320D238CB00106DC7 /* ZDPermissionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F4DBE0E220D238CB00106DC7 /* ZDPermissionManager.m */; };
+		F4DBE0E620D238E900106DC7 /* ZDPermissionPhotos.m in Sources */ = {isa = PBXBuildFile; fileRef = F4DBE0E520D238E900106DC7 /* ZDPermissionPhotos.m */; };
+		F4DBE0E920D23CA400106DC7 /* ZDPermissionCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = F4DBE0E820D23CA400106DC7 /* ZDPermissionCamera.m */; };
+		F4DBE0EC20D23CD900106DC7 /* ZDPermission.m in Sources */ = {isa = PBXBuildFile; fileRef = F4DBE0EB20D23CD900106DC7 /* ZDPermission.m */; };
+		F4DBE0EF20D2425C00106DC7 /* ZDPermissionContacts.m in Sources */ = {isa = PBXBuildFile; fileRef = F4DBE0EE20D2425C00106DC7 /* ZDPermissionContacts.m */; };
+		F4DBE0F220D246E100106DC7 /* ZDPermissionMicrophone.m in Sources */ = {isa = PBXBuildFile; fileRef = F4DBE0F120D246E100106DC7 /* ZDPermissionMicrophone.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +71,21 @@
 		F410CADD20D0C8C0003C045A /* NSString+JudgeType.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+JudgeType.m"; sourceTree = "<group>"; };
 		F410CADF20D0C94E003C045A /* DeviceInfoUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeviceInfoUtil.h; sourceTree = "<group>"; };
 		F410CAE020D0C94E003C045A /* DeviceInfoUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeviceInfoUtil.m; sourceTree = "<group>"; };
+		F410CAE220D0FA60003C045A /* DemoListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoListViewController.h; sourceTree = "<group>"; };
+		F410CAE320D0FA60003C045A /* DemoListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoListViewController.m; sourceTree = "<group>"; };
+		F410CAE420D0FA60003C045A /* DemoListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DemoListViewController.xib; sourceTree = "<group>"; };
+		F4DBE0E120D238CB00106DC7 /* ZDPermissionManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZDPermissionManager.h; sourceTree = "<group>"; };
+		F4DBE0E220D238CB00106DC7 /* ZDPermissionManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZDPermissionManager.m; sourceTree = "<group>"; };
+		F4DBE0E420D238E900106DC7 /* ZDPermissionPhotos.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZDPermissionPhotos.h; sourceTree = "<group>"; };
+		F4DBE0E520D238E900106DC7 /* ZDPermissionPhotos.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZDPermissionPhotos.m; sourceTree = "<group>"; };
+		F4DBE0E720D23CA400106DC7 /* ZDPermissionCamera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZDPermissionCamera.h; sourceTree = "<group>"; };
+		F4DBE0E820D23CA400106DC7 /* ZDPermissionCamera.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZDPermissionCamera.m; sourceTree = "<group>"; };
+		F4DBE0EA20D23CD900106DC7 /* ZDPermission.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZDPermission.h; sourceTree = "<group>"; };
+		F4DBE0EB20D23CD900106DC7 /* ZDPermission.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZDPermission.m; sourceTree = "<group>"; };
+		F4DBE0ED20D2425C00106DC7 /* ZDPermissionContacts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZDPermissionContacts.h; sourceTree = "<group>"; };
+		F4DBE0EE20D2425C00106DC7 /* ZDPermissionContacts.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZDPermissionContacts.m; sourceTree = "<group>"; };
+		F4DBE0F020D246E100106DC7 /* ZDPermissionMicrophone.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZDPermissionMicrophone.h; sourceTree = "<group>"; };
+		F4DBE0F120D246E100106DC7 /* ZDPermissionMicrophone.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZDPermissionMicrophone.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +138,9 @@
 			children = (
 				F410CAD520D0B569003C045A /* Category */,
 				F410CAD120D0B27C003C045A /* Tools */,
+				F410CAE220D0FA60003C045A /* DemoListViewController.h */,
+				F410CAE320D0FA60003C045A /* DemoListViewController.m */,
+				F410CAE420D0FA60003C045A /* DemoListViewController.xib */,
 				F410CA9F20D0AF92003C045A /* AppDelegate.h */,
 				F410CAA020D0AF92003C045A /* AppDelegate.m */,
 				F410CAA220D0AF92003C045A /* ViewController.h */,
@@ -149,6 +175,7 @@
 		F410CAD120D0B27C003C045A /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				F4DBE0E020D2389800106DC7 /* ZDPermissions */,
 				F410CAD320D0B290003C045A /* IconUtil.h */,
 				F410CAD220D0B290003C045A /* IconUtil.m */,
 				F410CADF20D0C94E003C045A /* DeviceInfoUtil.h */,
@@ -166,6 +193,25 @@
 				F410CADD20D0C8C0003C045A /* NSString+JudgeType.m */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		F4DBE0E020D2389800106DC7 /* ZDPermissions */ = {
+			isa = PBXGroup;
+			children = (
+				F4DBE0E120D238CB00106DC7 /* ZDPermissionManager.h */,
+				F4DBE0E220D238CB00106DC7 /* ZDPermissionManager.m */,
+				F4DBE0EA20D23CD900106DC7 /* ZDPermission.h */,
+				F4DBE0EB20D23CD900106DC7 /* ZDPermission.m */,
+				F4DBE0E420D238E900106DC7 /* ZDPermissionPhotos.h */,
+				F4DBE0E520D238E900106DC7 /* ZDPermissionPhotos.m */,
+				F4DBE0E720D23CA400106DC7 /* ZDPermissionCamera.h */,
+				F4DBE0E820D23CA400106DC7 /* ZDPermissionCamera.m */,
+				F4DBE0F020D246E100106DC7 /* ZDPermissionMicrophone.h */,
+				F4DBE0F120D246E100106DC7 /* ZDPermissionMicrophone.m */,
+				F4DBE0ED20D2425C00106DC7 /* ZDPermissionContacts.h */,
+				F4DBE0EE20D2425C00106DC7 /* ZDPermissionContacts.m */,
+			);
+			path = ZDPermissions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,6 +320,7 @@
 				F410CAAC20D0AF95003C045A /* LaunchScreen.storyboard in Resources */,
 				F410CAA920D0AF95003C045A /* Assets.xcassets in Resources */,
 				F410CAA720D0AF92003C045A /* Main.storyboard in Resources */,
+				F410CAE620D0FA60003C045A /* DemoListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,13 +345,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4DBE0F220D246E100106DC7 /* ZDPermissionMicrophone.m in Sources */,
+				F4DBE0EC20D23CD900106DC7 /* ZDPermission.m in Sources */,
 				F410CAD420D0B290003C045A /* IconUtil.m in Sources */,
 				F410CAE120D0C94E003C045A /* DeviceInfoUtil.m in Sources */,
 				F410CAA420D0AF92003C045A /* ViewController.m in Sources */,
+				F410CAE520D0FA60003C045A /* DemoListViewController.m in Sources */,
+				F4DBE0EF20D2425C00106DC7 /* ZDPermissionContacts.m in Sources */,
 				F410CADB20D0C788003C045A /* NSString+Fmt.m in Sources */,
+				F4DBE0E620D238E900106DC7 /* ZDPermissionPhotos.m in Sources */,
 				F410CAAF20D0AF95003C045A /* main.m in Sources */,
+				F4DBE0E920D23CA400106DC7 /* ZDPermissionCamera.m in Sources */,
 				F410CAA120D0AF92003C045A /* AppDelegate.m in Sources */,
 				F410CADE20D0C8C0003C045A /* NSString+JudgeType.m in Sources */,
+				F4DBE0E320D238CB00106DC7 /* ZDPermissionManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,6 +530,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B7QX9LL49R;
 				INFOPLIST_FILE = ProductDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -493,6 +548,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B7QX9LL49R;
 				INFOPLIST_FILE = ProductDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
