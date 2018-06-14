@@ -1,14 +1,14 @@
 //
-//  LBXPermissionReminders.m
-//  LBXKit
+//  ZDPermissionReminders.m
+//  ProductDemo
 //
-//  Created by lbx on 2017/10/30.
-//  Copyright © 2017年 lbx. All rights reserved.
+//  Created by qizd on 2018/6/14.
+//  Copyright © 2018年 qizd. All rights reserved.
 //
 
-#import "LBXPermissionReminders.h"
+#import "ZDPermissionReminders.h"
 
-@implementation LBXPermissionReminders
+@implementation ZDPermissionReminders
 
 + (BOOL)authorized
 {
@@ -53,4 +53,5 @@
         } break;
     }
 }
+
 @end

@@ -1,19 +1,18 @@
 //
-//  LBXPermissionHealth.m
-//  LBXKit
+//  ZDPermissionHealth.m
+//  ProductDemo
 //
-//  Created by lbx on 2017/10/30.
-//  Copyright © 2017年 lbx. All rights reserved.
+//  Created by qizd on 2018/6/14.
+//  Copyright © 2018年 qizd. All rights reserved.
 //
 
-#import "LBXPermissionHealth.h"
-#import <HealthKit/HealthKit.h>
+#import "ZDPermissionHealth.h"
 
-@implementation LBXPermissionHealth
+@implementation ZDPermissionHealth
 
 + (BOOL)authorized
 {
-    return [self authorizationStatus] == 2;
+    return [self authorizationStatus] == HKAuthorizationStatusSharingAuthorized;
 }
 
 
@@ -24,7 +23,7 @@
 
 /**
  health status
-
+ 
  @return
  0 : NotDetermined
  1 : SharingDenied
@@ -57,7 +56,7 @@
     }
     
     return 3;
-  
+    
 }
 
 /*!
@@ -70,7 +69,7 @@
 + (BOOL)isHealthDataAvailable
 {
     if (@available(iOS 8,*)) {
-    return [HKHealthStore isHealthDataAvailable];
+        return [HKHealthStore isHealthDataAvailable];
     }
     return NO;
 }
@@ -104,16 +103,16 @@
             switch (status) {
                 case HKAuthorizationStatusNotDetermined:
                 {
-                        HKHealthStore *healthStore = [[HKHealthStore alloc] init];
-                        [healthStore requestAuthorizationToShareTypes:writeTypes
-                                                            readTypes:readTypes
-                                                           completion:^(BOOL success, NSError *error) {
-                                                               if (completion) {
-                                                                   dispatch_async(dispatch_get_main_queue(), ^{
-                                                                       completion(success,YES);
-                                                                   });
-                                                               }
-                                                           }];
+                    HKHealthStore *healthStore = [[HKHealthStore alloc] init];
+                    [healthStore requestAuthorizationToShareTypes:writeTypes
+                                                        readTypes:readTypes
+                                                       completion:^(BOOL success, NSError *error) {
+                                                           if (completion) {
+                                                               dispatch_async(dispatch_get_main_queue(), ^{
+                                                                   completion(success,YES);
+                                                               });
+                                                           }
+                                                       }];
                 }
                     break;
                 case HKAuthorizationStatusSharingAuthorized: {

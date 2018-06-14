@@ -1,27 +1,26 @@
 //
-//  LBXPermissionGPS.m
-//  LBXKits
+//  ZDPermissionLocation.m
+//  ProductDemo
 //
-//  Created by lbx on 2017/9/7.
-//  Copyright © 2017年 lbx. All rights reserved.
+//  Created by qizd on 2018/6/14.
+//  Copyright © 2018年 qizd. All rights reserved.
 //
 
-#import "LBXPermissionLocation.h"
-#import <UIKit/UIKit.h>
+#import "ZDPermissionLocation.h"
 
-@interface LBXPermissionLocation()<CLLocationManagerDelegate>
+@interface ZDPermissionLocation()<CLLocationManagerDelegate>
 @property(nonatomic,strong) CLLocationManager *locationManager;
 @property (nonatomic, copy) void (^permissionCompletion)(BOOL granted,BOOL firstTime);
 @end
 
-@implementation LBXPermissionLocation
+@implementation ZDPermissionLocation
 
 + (instancetype)sharedManager
 {
-    static LBXPermissionLocation* _sharedInstance = nil;
+    static ZDPermissionLocation* _sharedInstance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _sharedInstance = [[LBXPermissionLocation alloc] init];
+        _sharedInstance = [[ZDPermissionLocation alloc] init];
     });
     
     return _sharedInstance;
@@ -44,7 +43,6 @@
     {
         return authorizationStatus == kCLAuthorizationStatusAuthorized;
     }
-   
     return NO;
 }
 
@@ -73,7 +71,7 @@
                 return;
             }
             
-            [[LBXPermissionLocation sharedManager]startGps:completion];
+            [[ZDPermissionLocation sharedManager]startGps:completion];
         }
             break;
         case kCLAuthorizationStatusDenied:
@@ -164,6 +162,5 @@
     }
     
 }
-
 
 @end

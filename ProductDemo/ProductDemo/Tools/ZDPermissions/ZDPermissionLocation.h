@@ -1,23 +1,24 @@
 //
-//  LBXPermissionGPS.h
-//  LBXKits
+//  ZDPermissionLocation.h
+//  ProductDemo
 //
-//  Created by lbx on 2017/9/7.
-//  Copyright © 2017年 lbx. All rights reserved.
+//  Created by qizd on 2018/6/14.
+//  Copyright © 2018年 qizd. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
 
-NS_ASSUME_NONNULL_BEGIN
-
-@interface LBXPermissionLocation : NSObject
+@interface ZDPermissionLocation : NSObject
 
 /**
  @return YES if GPS system service enabled,NO if GPS system service is not enabled
  */
 + (BOOL)isServicesEnabled;
 
+/**
+ 需要先判断服务是否可用，调用isServicesEnabled
+ */
 + (BOOL)authorized;
 
 + (CLAuthorizationStatus)authorizationStatus;
@@ -25,5 +26,3 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)authorizeWithCompletion:(void(^)(BOOL granted,BOOL firstTime))completion;
 
 @end
-
-NS_ASSUME_NONNULL_END

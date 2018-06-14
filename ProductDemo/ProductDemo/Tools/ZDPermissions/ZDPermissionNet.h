@@ -1,15 +1,14 @@
 //
-//  LBXPermissionNetwork.h
-//  LBXKits
+//  ZDPermissionNet.h
+//  ProductDemo
 //
-//  Created by lbx on 2017/12/7.
-//  Copyright © 2017年 lbx. All rights reserved.
+//  Created by qizd on 2018/6/14.
+//  Copyright © 2018年 qizd. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
-///data networks permission
-@interface LBXPermissionData : NSObject
+@interface ZDPermissionNet : NSObject
 
 /**
  suggest call this method delay a few seconds after app launch
