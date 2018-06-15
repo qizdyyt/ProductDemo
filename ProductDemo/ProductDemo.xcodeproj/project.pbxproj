@@ -24,7 +24,6 @@
 		F4DBE0E320D238CB00106DC7 /* ZDPermissionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F4DBE0E220D238CB00106DC7 /* ZDPermissionManager.m */; };
 		F4DBE0E620D238E900106DC7 /* ZDPermissionPhotos.m in Sources */ = {isa = PBXBuildFile; fileRef = F4DBE0E520D238E900106DC7 /* ZDPermissionPhotos.m */; };
 		F4DBE0E920D23CA400106DC7 /* ZDPermissionCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = F4DBE0E820D23CA400106DC7 /* ZDPermissionCamera.m */; };
-		F4DBE0EC20D23CD900106DC7 /* ZDPermission.m in Sources */ = {isa = PBXBuildFile; fileRef = F4DBE0EB20D23CD900106DC7 /* ZDPermission.m */; };
 		F4DBE0EF20D2425C00106DC7 /* ZDPermissionContacts.m in Sources */ = {isa = PBXBuildFile; fileRef = F4DBE0EE20D2425C00106DC7 /* ZDPermissionContacts.m */; };
 		F4DBE0F220D246E100106DC7 /* ZDPermissionMicrophone.m in Sources */ = {isa = PBXBuildFile; fileRef = F4DBE0F120D246E100106DC7 /* ZDPermissionMicrophone.m */; };
 		F4DBE10420D24D8C00106DC7 /* ZDPermissionCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = F4DBE10320D24D8C00106DC7 /* ZDPermissionCalendar.m */; };
@@ -32,8 +31,6 @@
 		F4DBE10A20D255CF00106DC7 /* ZDPermissionHealth.m in Sources */ = {isa = PBXBuildFile; fileRef = F4DBE10920D255CF00106DC7 /* ZDPermissionHealth.m */; };
 		F4DBE10D20D256D500106DC7 /* ZDPermissionLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = F4DBE10C20D256D500106DC7 /* ZDPermissionLocation.m */; };
 		F4DBE11020D2593900106DC7 /* ZDPermissionReminders.m in Sources */ = {isa = PBXBuildFile; fileRef = F4DBE10F20D2593900106DC7 /* ZDPermissionReminders.m */; };
-		F4DBE11520D25A0E00106DC7 /* LBXPermissionSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = F4DBE11320D25A0D00106DC7 /* LBXPermissionSetting.m */; };
-		F4DBE11620D25A0E00106DC7 /* LBXPermission.m in Sources */ = {isa = PBXBuildFile; fileRef = F4DBE11420D25A0D00106DC7 /* LBXPermission.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,8 +84,6 @@
 		F4DBE0E520D238E900106DC7 /* ZDPermissionPhotos.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZDPermissionPhotos.m; sourceTree = "<group>"; };
 		F4DBE0E720D23CA400106DC7 /* ZDPermissionCamera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZDPermissionCamera.h; sourceTree = "<group>"; };
 		F4DBE0E820D23CA400106DC7 /* ZDPermissionCamera.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZDPermissionCamera.m; sourceTree = "<group>"; };
-		F4DBE0EA20D23CD900106DC7 /* ZDPermission.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZDPermission.h; sourceTree = "<group>"; };
-		F4DBE0EB20D23CD900106DC7 /* ZDPermission.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZDPermission.m; sourceTree = "<group>"; };
 		F4DBE0ED20D2425C00106DC7 /* ZDPermissionContacts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZDPermissionContacts.h; sourceTree = "<group>"; };
 		F4DBE0EE20D2425C00106DC7 /* ZDPermissionContacts.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZDPermissionContacts.m; sourceTree = "<group>"; };
 		F4DBE0F020D246E100106DC7 /* ZDPermissionMicrophone.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZDPermissionMicrophone.h; sourceTree = "<group>"; };
@@ -103,10 +98,6 @@
 		F4DBE10C20D256D500106DC7 /* ZDPermissionLocation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZDPermissionLocation.m; sourceTree = "<group>"; };
 		F4DBE10E20D2593900106DC7 /* ZDPermissionReminders.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZDPermissionReminders.h; sourceTree = "<group>"; };
 		F4DBE10F20D2593900106DC7 /* ZDPermissionReminders.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZDPermissionReminders.m; sourceTree = "<group>"; };
-		F4DBE11120D25A0C00106DC7 /* LBXPermission.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXPermission.h; sourceTree = "<group>"; };
-		F4DBE11220D25A0D00106DC7 /* LBXPermissionSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXPermissionSetting.h; sourceTree = "<group>"; };
-		F4DBE11320D25A0D00106DC7 /* LBXPermissionSetting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXPermissionSetting.m; sourceTree = "<group>"; };
-		F4DBE11420D25A0D00106DC7 /* LBXPermission.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXPermission.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,14 +210,8 @@
 		F4DBE0E020D2389800106DC7 /* ZDPermissions */ = {
 			isa = PBXGroup;
 			children = (
-				F4DBE11120D25A0C00106DC7 /* LBXPermission.h */,
-				F4DBE11420D25A0D00106DC7 /* LBXPermission.m */,
-				F4DBE11220D25A0D00106DC7 /* LBXPermissionSetting.h */,
-				F4DBE11320D25A0D00106DC7 /* LBXPermissionSetting.m */,
 				F4DBE0E120D238CB00106DC7 /* ZDPermissionManager.h */,
 				F4DBE0E220D238CB00106DC7 /* ZDPermissionManager.m */,
-				F4DBE0EA20D23CD900106DC7 /* ZDPermission.h */,
-				F4DBE0EB20D23CD900106DC7 /* ZDPermission.m */,
 				F4DBE0E420D238E900106DC7 /* ZDPermissionPhotos.h */,
 				F4DBE0E520D238E900106DC7 /* ZDPermissionPhotos.m */,
 				F4DBE0E720D23CA400106DC7 /* ZDPermissionCamera.h */,
@@ -381,8 +366,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4DBE0F220D246E100106DC7 /* ZDPermissionMicrophone.m in Sources */,
-				F4DBE0EC20D23CD900106DC7 /* ZDPermission.m in Sources */,
-				F4DBE11520D25A0E00106DC7 /* LBXPermissionSetting.m in Sources */,
 				F410CAD420D0B290003C045A /* IconUtil.m in Sources */,
 				F4DBE10A20D255CF00106DC7 /* ZDPermissionHealth.m in Sources */,
 				F410CAE120D0C94E003C045A /* DeviceInfoUtil.m in Sources */,
@@ -390,7 +373,6 @@
 				F410CAE520D0FA60003C045A /* DemoListViewController.m in Sources */,
 				F4DBE0EF20D2425C00106DC7 /* ZDPermissionContacts.m in Sources */,
 				F410CADB20D0C788003C045A /* NSString+Fmt.m in Sources */,
-				F4DBE11620D25A0E00106DC7 /* LBXPermission.m in Sources */,
 				F4DBE0E620D238E900106DC7 /* ZDPermissionPhotos.m in Sources */,
 				F410CAAF20D0AF95003C045A /* main.m in Sources */,
 				F4DBE0E920D23CA400106DC7 /* ZDPermissionCamera.m in Sources */,
