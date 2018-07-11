@@ -23,4 +23,6 @@
 
 ///删除字符串中的emoji
 + (NSString *)MySQLUTF8Safe:(NSString *)aString;
+
+
 @end
