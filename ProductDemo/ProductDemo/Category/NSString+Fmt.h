@@ -18,7 +18,11 @@
 + (NSString *)Null2EmptyStr:(id)myVal;
 ///nil, @"", null -> @"null"
 + (NSString *)Null2NullStr:(id)myVal;
-
+///是否为空字符串
 + (BOOL)isEmptyString:(NSString *)myVal;
+
+///删除字符串中的emoji
++ (NSString *)MySQLUTF8Safe:(NSString *)aString;
+
 
 @end

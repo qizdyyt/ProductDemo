@@ -35,4 +35,22 @@
     if ([myVal isEqualToString:@""] || [myVal isEqualToString:@"null"] || [myVal isEqualToString:@"Null"]) { return YES; }
     return NO;
 }
+
+//原理：emoji转换成utf-8编码后是4位，中文3位，英文1位
++ (NSString *)MySQLUTF8Safe:(NSString *)aString {
+    
+    const NSInteger maxCharcaterLength = 3;
+    
+    NSMutableString *tempString = [aString mutableCopy];
+    
+    [tempString enumerateSubstringsInRange:NSMakeRange(0, tempString.length) options:NSStringEnumerationByComposedCharacterSequences usingBlock:^(NSString *substring, NSRange substringRange, NSRange enclosingRange, BOOL *stop) {
+        
+        NSUInteger lengthOfCharcater = [substring lengthOfBytesUsingEncoding:NSUTF8StringEncoding];
+        if (lengthOfCharcater > maxCharcaterLength) {
+            [tempString deleteCharactersInRange:substringRange];
+        }
+    }];
+    
+    return tempString;
+}
 @end

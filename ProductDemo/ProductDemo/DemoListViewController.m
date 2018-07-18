@@ -8,6 +8,7 @@
 
 #import "DemoListViewController.h"
 #import "TestPermissionViewController.h"
+#import "TransitionFirstViewController.h"
 
 @interface DemoListViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -24,7 +25,7 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     
-    self.dataArray = [NSArray arrayWithObjects:@"测试权限", nil];
+    self.dataArray = [NSArray arrayWithObjects:@"测试权限", @"自定义跳转动画present、push", nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -56,7 +57,9 @@
         case 0:
             [self.navigationController pushViewController:[[TestPermissionViewController alloc] init] animated:YES];
             break;
-            
+        case 1:
+            [self.navigationController pushViewController:[[TransitionFirstViewController alloc] init] animated:YES];
+            break;
         default:
             break;
     }

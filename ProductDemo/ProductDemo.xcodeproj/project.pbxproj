@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		F410CAA120D0AF92003C045A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F410CAA020D0AF92003C045A /* AppDelegate.m */; };
-		F410CAA420D0AF92003C045A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F410CAA320D0AF92003C045A /* ViewController.m */; };
 		F410CAA720D0AF92003C045A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F410CAA520D0AF92003C045A /* Main.storyboard */; };
 		F410CAA920D0AF95003C045A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F410CAA820D0AF95003C045A /* Assets.xcassets */; };
 		F410CAAC20D0AF95003C045A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F410CAAA20D0AF95003C045A /* LaunchScreen.storyboard */; };
@@ -21,6 +20,14 @@
 		F410CAE120D0C94E003C045A /* DeviceInfoUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = F410CAE020D0C94E003C045A /* DeviceInfoUtil.m */; };
 		F410CAE520D0FA60003C045A /* DemoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F410CAE320D0FA60003C045A /* DemoListViewController.m */; };
 		F410CAE620D0FA60003C045A /* DemoListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F410CAE420D0FA60003C045A /* DemoListViewController.xib */; };
+		F4225F2120F5CA1000114095 /* TransitionFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4225F2020F5CA1000114095 /* TransitionFirstViewController.m */; };
+		F4225F2420F5CA2F00114095 /* TransitionSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4225F2320F5CA2F00114095 /* TransitionSecondViewController.m */; };
+		F4225F2720F5CAC100114095 /* PresentTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = F4225F2620F5CAC100114095 /* PresentTransition.m */; };
+		F4225F2F20F5DBEF00114095 /* DismissTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = F4225F2E20F5DBEF00114095 /* DismissTransition.m */; };
+		F4225F3120F5E26100114095 /* bg1.png in Resources */ = {isa = PBXBuildFile; fileRef = F4225F3020F5E26100114095 /* bg1.png */; };
+		F4225F3320F5E26500114095 /* bg2.png in Resources */ = {isa = PBXBuildFile; fileRef = F4225F3220F5E26500114095 /* bg2.png */; };
+		F4225F3620F5E4CA00114095 /* i3.png in Resources */ = {isa = PBXBuildFile; fileRef = F4225F3420F5E4CA00114095 /* i3.png */; };
+		F4225F3720F5E4CA00114095 /* i4.png in Resources */ = {isa = PBXBuildFile; fileRef = F4225F3520F5E4CA00114095 /* i4.png */; };
 		F43ADD5F20D384E0002DD68F /* TestPermissionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F43ADD5E20D384E0002DD68F /* TestPermissionViewController.m */; };
 		F4DBE0E320D238CB00106DC7 /* ZDPermissionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F4DBE0E220D238CB00106DC7 /* ZDPermissionManager.m */; };
 		F4DBE0E620D238E900106DC7 /* ZDPermissionPhotos.m in Sources */ = {isa = PBXBuildFile; fileRef = F4DBE0E520D238E900106DC7 /* ZDPermissionPhotos.m */; };
@@ -55,8 +62,6 @@
 		F410CA9C20D0AF92003C045A /* ProductDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProductDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F410CA9F20D0AF92003C045A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F410CAA020D0AF92003C045A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F410CAA220D0AF92003C045A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		F410CAA320D0AF92003C045A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		F410CAA620D0AF92003C045A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F410CAA820D0AF95003C045A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F410CAAB20D0AF95003C045A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -79,6 +84,18 @@
 		F410CAE220D0FA60003C045A /* DemoListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoListViewController.h; sourceTree = "<group>"; };
 		F410CAE320D0FA60003C045A /* DemoListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoListViewController.m; sourceTree = "<group>"; };
 		F410CAE420D0FA60003C045A /* DemoListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DemoListViewController.xib; sourceTree = "<group>"; };
+		F4225F1F20F5CA1000114095 /* TransitionFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransitionFirstViewController.h; sourceTree = "<group>"; };
+		F4225F2020F5CA1000114095 /* TransitionFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransitionFirstViewController.m; sourceTree = "<group>"; };
+		F4225F2220F5CA2F00114095 /* TransitionSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransitionSecondViewController.h; sourceTree = "<group>"; };
+		F4225F2320F5CA2F00114095 /* TransitionSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransitionSecondViewController.m; sourceTree = "<group>"; };
+		F4225F2520F5CAC100114095 /* PresentTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PresentTransition.h; sourceTree = "<group>"; };
+		F4225F2620F5CAC100114095 /* PresentTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PresentTransition.m; sourceTree = "<group>"; };
+		F4225F2D20F5DBEF00114095 /* DismissTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DismissTransition.h; sourceTree = "<group>"; };
+		F4225F2E20F5DBEF00114095 /* DismissTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DismissTransition.m; sourceTree = "<group>"; };
+		F4225F3020F5E26100114095 /* bg1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg1.png; sourceTree = "<group>"; };
+		F4225F3220F5E26500114095 /* bg2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg2.png; sourceTree = "<group>"; };
+		F4225F3420F5E4CA00114095 /* i3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = i3.png; sourceTree = "<group>"; };
+		F4225F3520F5E4CA00114095 /* i4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = i4.png; sourceTree = "<group>"; };
 		F43ADD5D20D384E0002DD68F /* TestPermissionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestPermissionViewController.h; sourceTree = "<group>"; };
 		F43ADD5E20D384E0002DD68F /* TestPermissionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestPermissionViewController.m; sourceTree = "<group>"; };
 		F43ADD6020D38783002DD68F /* Product.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Product.pch; sourceTree = "<group>"; };
@@ -161,10 +178,9 @@
 				F410CAE420D0FA60003C045A /* DemoListViewController.xib */,
 				F410CA9F20D0AF92003C045A /* AppDelegate.h */,
 				F410CAA020D0AF92003C045A /* AppDelegate.m */,
-				F410CAA220D0AF92003C045A /* ViewController.h */,
-				F410CAA320D0AF92003C045A /* ViewController.m */,
 				F43ADD6020D38783002DD68F /* Product.pch */,
 				F410CAA520D0AF92003C045A /* Main.storyboard */,
+				F4225F2820F5D37700114095 /* Images */,
 				F410CAA820D0AF95003C045A /* Assets.xcassets */,
 				F410CAAA20D0AF95003C045A /* LaunchScreen.storyboard */,
 				F410CAAD20D0AF95003C045A /* Info.plist */,
@@ -215,9 +231,36 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
+		F4225F1E20F5C9A800114095 /* Custom transition */ = {
+			isa = PBXGroup;
+			children = (
+				F4225F2520F5CAC100114095 /* PresentTransition.h */,
+				F4225F2620F5CAC100114095 /* PresentTransition.m */,
+				F4225F2D20F5DBEF00114095 /* DismissTransition.h */,
+				F4225F2E20F5DBEF00114095 /* DismissTransition.m */,
+				F4225F1F20F5CA1000114095 /* TransitionFirstViewController.h */,
+				F4225F2020F5CA1000114095 /* TransitionFirstViewController.m */,
+				F4225F2220F5CA2F00114095 /* TransitionSecondViewController.h */,
+				F4225F2320F5CA2F00114095 /* TransitionSecondViewController.m */,
+			);
+			path = "Custom transition";
+			sourceTree = "<group>";
+		};
+		F4225F2820F5D37700114095 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				F4225F3420F5E4CA00114095 /* i3.png */,
+				F4225F3520F5E4CA00114095 /* i4.png */,
+				F4225F3020F5E26100114095 /* bg1.png */,
+				F4225F3220F5E26500114095 /* bg2.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		F43ADD5C20D384AC002DD68F /* TestViewController */ = {
 			isa = PBXGroup;
 			children = (
+				F4225F1E20F5C9A800114095 /* Custom transition */,
 				F43ADD5D20D384E0002DD68F /* TestPermissionViewController.h */,
 				F43ADD5E20D384E0002DD68F /* TestPermissionViewController.m */,
 			);
@@ -357,7 +400,11 @@
 				F410CAAC20D0AF95003C045A /* LaunchScreen.storyboard in Resources */,
 				F410CAA920D0AF95003C045A /* Assets.xcassets in Resources */,
 				F410CAA720D0AF92003C045A /* Main.storyboard in Resources */,
+				F4225F3320F5E26500114095 /* bg2.png in Resources */,
 				F410CAE620D0FA60003C045A /* DemoListViewController.xib in Resources */,
+				F4225F3120F5E26100114095 /* bg1.png in Resources */,
+				F4225F3720F5E4CA00114095 /* i4.png in Resources */,
+				F4225F3620F5E4CA00114095 /* i3.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,10 +431,12 @@
 			files = (
 				F4DBE0F220D246E100106DC7 /* ZDPermissionMicrophone.m in Sources */,
 				F410CAD420D0B290003C045A /* IconUtil.m in Sources */,
+				F4225F2120F5CA1000114095 /* TransitionFirstViewController.m in Sources */,
 				F4DBE10A20D255CF00106DC7 /* ZDPermissionHealth.m in Sources */,
 				F43ADD5F20D384E0002DD68F /* TestPermissionViewController.m in Sources */,
+				F4225F2F20F5DBEF00114095 /* DismissTransition.m in Sources */,
 				F410CAE120D0C94E003C045A /* DeviceInfoUtil.m in Sources */,
-				F410CAA420D0AF92003C045A /* ViewController.m in Sources */,
+				F4225F2420F5CA2F00114095 /* TransitionSecondViewController.m in Sources */,
 				F410CAE520D0FA60003C045A /* DemoListViewController.m in Sources */,
 				F4DBE0EF20D2425C00106DC7 /* ZDPermissionContacts.m in Sources */,
 				F410CADB20D0C788003C045A /* NSString+Fmt.m in Sources */,
@@ -400,6 +449,7 @@
 				F410CADE20D0C8C0003C045A /* NSString+JudgeType.m in Sources */,
 				F4DBE0E320D238CB00106DC7 /* ZDPermissionManager.m in Sources */,
 				F4DBE10720D24E4000106DC7 /* ZDPermissionNet.m in Sources */,
+				F4225F2720F5CAC100114095 /* PresentTransition.m in Sources */,
 				F4DBE11020D2593900106DC7 /* ZDPermissionReminders.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -570,6 +620,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				COMPRESS_PNG_FILES = YES;
 				DEVELOPMENT_TEAM = B7QX9LL49R;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ProductDemo/Product.pch;
@@ -590,6 +641,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				COMPRESS_PNG_FILES = YES;
 				DEVELOPMENT_TEAM = B7QX9LL49R;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ProductDemo/Product.pch;
