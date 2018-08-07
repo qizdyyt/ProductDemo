@@ -28,6 +28,7 @@
 		F4225F3320F5E26500114095 /* bg2.png in Resources */ = {isa = PBXBuildFile; fileRef = F4225F3220F5E26500114095 /* bg2.png */; };
 		F42875042119185600502406 /* bg4.png in Resources */ = {isa = PBXBuildFile; fileRef = F42875022119185500502406 /* bg4.png */; };
 		F42875052119185600502406 /* bg3.png in Resources */ = {isa = PBXBuildFile; fileRef = F42875032119185600502406 /* bg3.png */; };
+		F428750921191BDC00502406 /* CollectionViewDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = F428750821191BDC00502406 /* CollectionViewDemoController.m */; };
 		F43ADD5F20D384E0002DD68F /* TestPermissionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F43ADD5E20D384E0002DD68F /* TestPermissionViewController.m */; };
 		F4DBE0E320D238CB00106DC7 /* ZDPermissionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F4DBE0E220D238CB00106DC7 /* ZDPermissionManager.m */; };
 		F4DBE0E620D238E900106DC7 /* ZDPermissionPhotos.m in Sources */ = {isa = PBXBuildFile; fileRef = F4DBE0E520D238E900106DC7 /* ZDPermissionPhotos.m */; };
@@ -96,6 +97,8 @@
 		F4225F3220F5E26500114095 /* bg2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg2.png; sourceTree = "<group>"; };
 		F42875022119185500502406 /* bg4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg4.png; sourceTree = "<group>"; };
 		F42875032119185600502406 /* bg3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg3.png; sourceTree = "<group>"; };
+		F428750721191BDC00502406 /* CollectionViewDemoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewDemoController.h; sourceTree = "<group>"; };
+		F428750821191BDC00502406 /* CollectionViewDemoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewDemoController.m; sourceTree = "<group>"; };
 		F43ADD5D20D384E0002DD68F /* TestPermissionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestPermissionViewController.h; sourceTree = "<group>"; };
 		F43ADD5E20D384E0002DD68F /* TestPermissionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestPermissionViewController.m; sourceTree = "<group>"; };
 		F43ADD6020D38783002DD68F /* Product.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Product.pch; sourceTree = "<group>"; };
@@ -172,7 +175,7 @@
 			children = (
 				F410CAD520D0B569003C045A /* Category */,
 				F410CAD120D0B27C003C045A /* Tools */,
-				F43ADD5C20D384AC002DD68F /* TestViewController */,
+				F43ADD5C20D384AC002DD68F /* DemoViewController */,
 				F410CAE220D0FA60003C045A /* DemoListViewController.h */,
 				F410CAE320D0FA60003C045A /* DemoListViewController.m */,
 				F410CAE420D0FA60003C045A /* DemoListViewController.xib */,
@@ -257,14 +260,16 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
-		F43ADD5C20D384AC002DD68F /* TestViewController */ = {
+		F43ADD5C20D384AC002DD68F /* DemoViewController */ = {
 			isa = PBXGroup;
 			children = (
 				F4225F1E20F5C9A800114095 /* Custom transition */,
 				F43ADD5D20D384E0002DD68F /* TestPermissionViewController.h */,
 				F43ADD5E20D384E0002DD68F /* TestPermissionViewController.m */,
+				F428750721191BDC00502406 /* CollectionViewDemoController.h */,
+				F428750821191BDC00502406 /* CollectionViewDemoController.m */,
 			);
-			path = TestViewController;
+			path = DemoViewController;
 			sourceTree = "<group>";
 		};
 		F4DBE0E020D2389800106DC7 /* ZDPermissions */ = {
@@ -446,6 +451,7 @@
 				F4DBE10D20D256D500106DC7 /* ZDPermissionLocation.m in Sources */,
 				F4DBE10420D24D8C00106DC7 /* ZDPermissionCalendar.m in Sources */,
 				F410CAA120D0AF92003C045A /* AppDelegate.m in Sources */,
+				F428750921191BDC00502406 /* CollectionViewDemoController.m in Sources */,
 				F410CADE20D0C8C0003C045A /* NSString+JudgeType.m in Sources */,
 				F4DBE0E320D238CB00106DC7 /* ZDPermissionManager.m in Sources */,
 				F4DBE10720D24E4000106DC7 /* ZDPermissionNet.m in Sources */,

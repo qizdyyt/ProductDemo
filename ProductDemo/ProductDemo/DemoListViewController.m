@@ -9,6 +9,7 @@
 #import "DemoListViewController.h"
 #import "TestPermissionViewController.h"
 #import "TransitionFirstViewController.h"
+#import "CollectionViewDemoController.h"
 
 @interface DemoListViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -21,11 +22,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    NSLog(@"%f, %@", IOS_VERSION, CurrentSystemVersion);
+    
     self.title = @"DEMO列表";
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     
-    self.dataArray = [NSArray arrayWithObjects:@"测试权限", @"自定义跳转动画present、push", nil];
+    self.dataArray = [NSArray arrayWithObjects:@"测试权限", @"自定义跳转动画present、push", @"Collection轮播与Edit", nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -59,6 +62,9 @@
             break;
         case 1:
             [self.navigationController pushViewController:[[TransitionFirstViewController alloc] init] animated:YES];
+            break;
+        case 2:
+            [self.navigationController pushViewController:[[CollectionViewDemoController alloc] init] animated:YES];
             break;
         default:
             break;
