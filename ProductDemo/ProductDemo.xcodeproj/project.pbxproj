@@ -40,6 +40,7 @@
 		F4DBE10A20D255CF00106DC7 /* ZDPermissionHealth.m in Sources */ = {isa = PBXBuildFile; fileRef = F4DBE10920D255CF00106DC7 /* ZDPermissionHealth.m */; };
 		F4DBE10D20D256D500106DC7 /* ZDPermissionLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = F4DBE10C20D256D500106DC7 /* ZDPermissionLocation.m */; };
 		F4DBE11020D2593900106DC7 /* ZDPermissionReminders.m in Sources */ = {isa = PBXBuildFile; fileRef = F4DBE10F20D2593900106DC7 /* ZDPermissionReminders.m */; };
+		F4ED52042119705800ADDC04 /* ZDCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F4ED52032119705800ADDC04 /* ZDCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,6 +124,8 @@
 		F4DBE10C20D256D500106DC7 /* ZDPermissionLocation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZDPermissionLocation.m; sourceTree = "<group>"; };
 		F4DBE10E20D2593900106DC7 /* ZDPermissionReminders.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZDPermissionReminders.h; sourceTree = "<group>"; };
 		F4DBE10F20D2593900106DC7 /* ZDPermissionReminders.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZDPermissionReminders.m; sourceTree = "<group>"; };
+		F4ED52022119705800ADDC04 /* ZDCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZDCollectionViewCell.h; sourceTree = "<group>"; };
+		F4ED52032119705800ADDC04 /* ZDCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZDCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -263,11 +266,10 @@
 		F43ADD5C20D384AC002DD68F /* DemoViewController */ = {
 			isa = PBXGroup;
 			children = (
+				F4ED52002119701600ADDC04 /* CollectionView */,
 				F4225F1E20F5C9A800114095 /* Custom transition */,
 				F43ADD5D20D384E0002DD68F /* TestPermissionViewController.h */,
 				F43ADD5E20D384E0002DD68F /* TestPermissionViewController.m */,
-				F428750721191BDC00502406 /* CollectionViewDemoController.h */,
-				F428750821191BDC00502406 /* CollectionViewDemoController.m */,
 			);
 			path = DemoViewController;
 			sourceTree = "<group>";
@@ -297,6 +299,25 @@
 				F4DBE10F20D2593900106DC7 /* ZDPermissionReminders.m */,
 			);
 			path = ZDPermissions;
+			sourceTree = "<group>";
+		};
+		F4ED52002119701600ADDC04 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				F4ED52012119703200ADDC04 /* cells */,
+				F428750721191BDC00502406 /* CollectionViewDemoController.h */,
+				F428750821191BDC00502406 /* CollectionViewDemoController.m */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		F4ED52012119703200ADDC04 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				F4ED52022119705800ADDC04 /* ZDCollectionViewCell.h */,
+				F4ED52032119705800ADDC04 /* ZDCollectionViewCell.m */,
+			);
+			path = cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -448,6 +469,7 @@
 				F4DBE0E620D238E900106DC7 /* ZDPermissionPhotos.m in Sources */,
 				F410CAAF20D0AF95003C045A /* main.m in Sources */,
 				F4DBE0E920D23CA400106DC7 /* ZDPermissionCamera.m in Sources */,
+				F4ED52042119705800ADDC04 /* ZDCollectionViewCell.m in Sources */,
 				F4DBE10D20D256D500106DC7 /* ZDPermissionLocation.m in Sources */,
 				F4DBE10420D24D8C00106DC7 /* ZDPermissionCalendar.m in Sources */,
 				F410CAA120D0AF92003C045A /* AppDelegate.m in Sources */,
