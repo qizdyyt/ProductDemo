@@ -10,8 +10,12 @@
 #ifndef ZDMacro_h
 #define ZDMacro_h
 
+//获取屏幕宽高
 #define ScreenHeight [UIScreen mainScreen].bounds.size.height
 #define ScreenWidth [UIScreen mainScreen].bounds.size.width
+
+//
+
 
 
 #endif /* ZDMacro_h */
