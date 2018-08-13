@@ -7,24 +7,29 @@
 //
 
 #import "CollectionViewDemoController.h"
+#import "ZDCollectionViewCell.h"
 
 @interface CollectionViewDemoController ()<UICollectionViewDelegate, UICollectionViewDataSource>
 
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) UICollectionView *carouselView;
 
+@property (nonatomic, retain) NSMutableArray *data;
 @end
 
 @implementation CollectionViewDemoController
+
+NSString * const ReuseIdentifier = @"CellID";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor orangeColor];
+    [self initData];
     
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
     // 设置cell间距: 水平间距, 注意点:系统可能会跳转(计算不准确)
-    layout.minimumInteritemSpacing = 10;
+    layout.minimumInteritemSpacing = 20;
     //设置垂直间距
     layout.minimumLineSpacing = 50;
     // 设置水平滚动方向
@@ -35,7 +40,7 @@
     //估算的尺寸(一般不需要设置)
     layout.estimatedItemSize = CGSizeMake(100, 100);
     //头部的参考尺寸(就是尺寸)
-    layout.headerReferenceSize = CGSizeMake(100, 100);
+    layout.headerReferenceSize = CGSizeMake(100, 0);
     //尾部的参考尺寸
     layout.footerReferenceSize = CGSizeMake(100, 100);
     //设置分区的头视图和尾视图是否始终固定在屏幕上边和下边
@@ -53,8 +58,11 @@
     self.collectionView.showsHorizontalScrollIndicator = NO;
     self.collectionView.showsVerticalScrollIndicator = NO;
     //设置是否需要弹簧效果
-    self.collectionView.bounces = NO;
+    self.collectionView.bounces = YES;
+    self.collectionView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.collectionView];
+    
+    [self.collectionView registerClass:NSClassFromString(@"ZDCollectionViewCell") forCellWithReuseIdentifier:ReuseIdentifier];
 }
 
 
@@ -64,15 +72,11 @@
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 10;
+    return self.data.count;
 }
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *identifier = @"identifier";
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
-    if (cell == nil) {
-        cell = [[UICollectionViewCell alloc] init];
-    }
+    ZDCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:ReuseIdentifier forIndexPath:indexPath];
     /*
      注意:
      UICollectioncView的cell和UITableView的cell不太一样,
@@ -82,13 +86,21 @@
      */
     // 2.使用
     cell.backgroundColor = (indexPath.item % 2)?[UIColor redColor]:[UIColor greenColor];
-    
+    cell.content = [NSString stringWithFormat:@"%@", self.data[indexPath.row]];
     // 3.返回
     return cell;
     
 }
 
 
+
+#pragma mark - 初始化数据
+- (void)initData {
+    self.data = [NSMutableArray array];
+    for (int i = 0; i < 100; i++) {
+        [self.data addObject:[NSString stringWithFormat:@"%d", i]];
+    }
+}
 
 
 @end

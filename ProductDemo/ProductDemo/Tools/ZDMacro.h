@@ -15,8 +15,8 @@
 #define ScreenWidth [UIScreen mainScreen].bounds.size.width
 
 //获取系统版本
-#define IOS_VERSION [[[UIDevice currentDevice] systemVersion] floatValue]
-#define CurrentSystemVersion [[UIDevice currentDevice] systemVersion]
+#define IOS_VERSION [[[UIDevice currentDevice] systemVersion] floatValue]//float 数值
+#define CurrentSystemVersion [[UIDevice currentDevice] systemVersion]//字符串
 
 
 

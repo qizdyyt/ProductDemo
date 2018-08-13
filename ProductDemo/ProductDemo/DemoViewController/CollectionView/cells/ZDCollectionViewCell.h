@@ -10,4 +10,5 @@
 
 @interface ZDCollectionViewCell : UICollectionViewCell
 
+@property (nonatomic, copy) NSString *content;
 @end
