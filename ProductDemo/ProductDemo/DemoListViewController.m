@@ -22,7 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    NSLog(@"%f, %@", IOS_VERSION, CurrentSystemVersion);
+    NSLog(@"%f, %@", IOS_VERSION_FLOAT, CurrentSystemVersion);
     
     self.title = @"DEMO列表";
     self.tableView.delegate = self;

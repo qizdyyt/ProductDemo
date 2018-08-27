@@ -17,6 +17,7 @@
     if (self = [super initWithFrame:frame]) {
         UILabel *contentLabel = [[UILabel alloc] initWithFrame:self.bounds];
         self.contentLabel = contentLabel;
+        self.contentLabel.textAlignment = NSTextAlignmentCenter;
         [self.contentView addSubview:self.contentLabel];
     }
     return self;

@@ -15,9 +15,11 @@
 #define ScreenWidth [UIScreen mainScreen].bounds.size.width
 
 //获取系统版本
-#define IOS_VERSION [[[UIDevice currentDevice] systemVersion] floatValue]//float 数值
+#define IOS_VERSION_FLOAT [[[UIDevice currentDevice] systemVersion] floatValue]//float 数值
 #define CurrentSystemVersion [[UIDevice currentDevice] systemVersion]//字符串
-
-
+//判断是iPhone或者iPad，是否retina屏
+#define IS_IPAD (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+#define IS_IPHONE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+#define IS_RETINA ([[UIScreen mainScreen] scale] >= 2.0)
 
 #endif /* ZDMacro_h */
