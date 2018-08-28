@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F40519522134F7CB00310191 /* RoundedImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = F40519502134F7CB00310191 /* RoundedImageController.m */; };
+		F40519532134F7CB00310191 /* RoundedImageController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F40519512134F7CB00310191 /* RoundedImageController.xib */; };
 		F410CAA120D0AF92003C045A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F410CAA020D0AF92003C045A /* AppDelegate.m */; };
 		F410CAA720D0AF92003C045A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F410CAA520D0AF92003C045A /* Main.storyboard */; };
 		F410CAA920D0AF95003C045A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F410CAA820D0AF95003C045A /* Assets.xcassets */; };
@@ -61,6 +63,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F405194F2134F7CB00310191 /* RoundedImageController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RoundedImageController.h; sourceTree = "<group>"; };
+		F40519502134F7CB00310191 /* RoundedImageController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RoundedImageController.m; sourceTree = "<group>"; };
+		F40519512134F7CB00310191 /* RoundedImageController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoundedImageController.xib; sourceTree = "<group>"; };
 		F410CA9C20D0AF92003C045A /* ProductDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProductDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F410CA9F20D0AF92003C045A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F410CAA020D0AF92003C045A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -266,10 +271,13 @@
 		F43ADD5C20D384AC002DD68F /* DemoViewController */ = {
 			isa = PBXGroup;
 			children = (
-				F4ED52002119701600ADDC04 /* CollectionView */,
+				F4ED52002119701600ADDC04 /* CollectionViewAndEdit */,
 				F4225F1E20F5C9A800114095 /* Custom transition */,
 				F43ADD5D20D384E0002DD68F /* TestPermissionViewController.h */,
 				F43ADD5E20D384E0002DD68F /* TestPermissionViewController.m */,
+				F405194F2134F7CB00310191 /* RoundedImageController.h */,
+				F40519502134F7CB00310191 /* RoundedImageController.m */,
+				F40519512134F7CB00310191 /* RoundedImageController.xib */,
 			);
 			path = DemoViewController;
 			sourceTree = "<group>";
@@ -301,14 +309,14 @@
 			path = ZDPermissions;
 			sourceTree = "<group>";
 		};
-		F4ED52002119701600ADDC04 /* CollectionView */ = {
+		F4ED52002119701600ADDC04 /* CollectionViewAndEdit */ = {
 			isa = PBXGroup;
 			children = (
 				F4ED52012119703200ADDC04 /* cells */,
 				F428750721191BDC00502406 /* CollectionViewDemoController.h */,
 				F428750821191BDC00502406 /* CollectionViewDemoController.m */,
 			);
-			path = CollectionView;
+			path = CollectionViewAndEdit;
 			sourceTree = "<group>";
 		};
 		F4ED52012119703200ADDC04 /* cells */ = {
@@ -424,6 +432,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F410CAAC20D0AF95003C045A /* LaunchScreen.storyboard in Resources */,
+				F40519532134F7CB00310191 /* RoundedImageController.xib in Resources */,
 				F42875042119185600502406 /* bg4.png in Resources */,
 				F410CAA920D0AF95003C045A /* Assets.xcassets in Resources */,
 				F410CAA720D0AF92003C045A /* Main.storyboard in Resources */,
@@ -468,6 +477,7 @@
 				F410CADB20D0C788003C045A /* NSString+Fmt.m in Sources */,
 				F4DBE0E620D238E900106DC7 /* ZDPermissionPhotos.m in Sources */,
 				F410CAAF20D0AF95003C045A /* main.m in Sources */,
+				F40519522134F7CB00310191 /* RoundedImageController.m in Sources */,
 				F4DBE0E920D23CA400106DC7 /* ZDPermissionCamera.m in Sources */,
 				F4ED52042119705800ADDC04 /* ZDCollectionViewCell.m in Sources */,
 				F4DBE10D20D256D500106DC7 /* ZDPermissionLocation.m in Sources */,

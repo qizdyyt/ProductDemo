@@ -10,9 +10,11 @@
 #import "TestPermissionViewController.h"
 #import "TransitionFirstViewController.h"
 #import "CollectionViewDemoController.h"
+#import "RoundedImageController.h"
 
 @interface DemoListViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (nonatomic, copy) NSString *tmp;
 
 @property (nonatomic, strong) NSArray *dataArray;
 @end
@@ -28,7 +30,9 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     
-    self.dataArray = [NSArray arrayWithObjects:@"测试权限", @"自定义跳转动画present、push", @"Collection轮播与Edit", nil];
+    self.dataArray = [NSArray arrayWithObjects:@"测试权限", @"自定义跳转动画present、push", @"Collection轮播与Edit", @"图片圆角", nil];
+    
+    self.title = self.tmp;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -66,6 +70,12 @@
         case 2:
             [self.navigationController pushViewController:[[CollectionViewDemoController alloc] init] animated:YES];
             break;
+        case 3:
+        {
+            RoundedImageController *roundedImageVC = [[RoundedImageController alloc] initWithNibName:@"RoundedImageController" bundle:[NSBundle mainBundle]];
+            [self.navigationController pushViewController:roundedImageVC animated:YES];
+        }
+            
         default:
             break;
     }
