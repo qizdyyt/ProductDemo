@@ -11,6 +11,7 @@
 #import "TransitionFirstViewController.h"
 #import "CollectionViewDemoController.h"
 #import "RoundedImageController.h"
+#import "SingletonViewController.h"
 
 @interface DemoListViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -30,7 +31,7 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     
-    self.dataArray = [NSArray arrayWithObjects:@"测试权限", @"自定义跳转动画present、push", @"Collection轮播与Edit", @"图片圆角", nil];
+    self.dataArray = [NSArray arrayWithObjects:@"测试权限", @"自定义跳转动画present、push", @"Collection轮播与Edit", @"图片圆角", @"单例模式", nil];
     
     self.title = self.tmp;
 }
@@ -75,6 +76,14 @@
             RoundedImageController *roundedImageVC = [[RoundedImageController alloc] initWithNibName:@"RoundedImageController" bundle:[NSBundle mainBundle]];
             [self.navigationController pushViewController:roundedImageVC animated:YES];
         }
+            break;
+        case 4:
+        {
+            SingletonViewController *singleVC = [[SingletonViewController alloc] init];
+            [self.navigationController pushViewController:singleVC animated:YES];
+            
+        }
+            break;
             
         default:
             break;

@@ -7,6 +7,7 @@
 //
 
 #import "RoundedImageController.h"
+#import "UIImageView+RoundImage.h"
 
 @interface RoundedImageController () <UITableViewDelegate, UITableViewDataSource>
 {
@@ -51,7 +52,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
         CGFloat imageV_x = 0;
         for (int i = 0; i < 15; i++) {
-            if (i > 10) {
+            if (i < 5) {
                 UIImageView *imageV = [[UIImageView alloc] initWithFrame:CGRectMake(imageV_x, 0, imageSize, imageSize)];
 //    普通圆角会造成卡顿明显
 //                imageV.layer.cornerRadius = 10;
@@ -67,12 +68,12 @@
 //                imageV.image = [UIImage imageNamed:@"1"];
                 
                 //正确的姿势
-                imageV.image = [self zd_drawRectWithRoundedCornerRadius:cornerRadius size:CGSizeMake(imageSize, imageSize) image:[UIImage imageNamed:@"1"]];
+                [imageV zd_drawRectWithRoundedCornerRadius:cornerRadius size:CGSizeMake(imageSize, imageSize) image:[UIImage imageNamed:@"1"]];
                 
                 [cell.contentView addSubview:imageV];
             } else {
                 UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(imageV_x, 0, imageSize, imageSize)];
-//                label.text = @"圆";
+                label.text = @"圆";
 
 //                一样会卡的死死的
 //                label.backgroundColor = [UIColor redColor];
@@ -98,21 +99,6 @@
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return cellHeight;
-}
-
-- (UIImage*)zd_drawRectWithRoundedCornerRadius:(CGFloat)radius size:(CGSize)size image:(UIImage *)image{
-    CGRect drawRect = CGRectMake(0, 0, size.width, size.height);
-    UIGraphicsBeginImageContextWithOptions(size, false, [UIScreen mainScreen].scale);
-    CGContextAddPath(UIGraphicsGetCurrentContext(), [UIBezierPath bezierPathWithRoundedRect:drawRect byRoundingCorners:UIRectCornerAllCorners cornerRadii:CGSizeMake(radius, radius)].CGPath);
-    
-    CGContextClip(UIGraphicsGetCurrentContext());
-    [image drawInRect:drawRect];
-    CGContextDrawPath(UIGraphicsGetCurrentContext(), kCGPathFillStroke);
-    
-    UIImage *resImg = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    return resImg;
-    
 }
 
 - (void)addCornerForUIView:(UIView *)view radius:(CGFloat)radius{

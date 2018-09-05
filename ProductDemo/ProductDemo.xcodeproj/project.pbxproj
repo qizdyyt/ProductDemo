@@ -31,6 +31,9 @@
 		F42875042119185600502406 /* bg4.png in Resources */ = {isa = PBXBuildFile; fileRef = F42875022119185500502406 /* bg4.png */; };
 		F42875052119185600502406 /* bg3.png in Resources */ = {isa = PBXBuildFile; fileRef = F42875032119185600502406 /* bg3.png */; };
 		F428750921191BDC00502406 /* CollectionViewDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = F428750821191BDC00502406 /* CollectionViewDemoController.m */; };
+		F4341086213F7B100082C13C /* UIImageView+RoundImage.m in Sources */ = {isa = PBXBuildFile; fileRef = F4341085213F7B100082C13C /* UIImageView+RoundImage.m */; };
+		F4341089213FA0AC0082C13C /* Singleton.m in Sources */ = {isa = PBXBuildFile; fileRef = F4341088213FA0AC0082C13C /* Singleton.m */; };
+		F434108C213FA21A0082C13C /* SingletonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F434108B213FA21A0082C13C /* SingletonViewController.m */; };
 		F43ADD5F20D384E0002DD68F /* TestPermissionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F43ADD5E20D384E0002DD68F /* TestPermissionViewController.m */; };
 		F4DBE0E320D238CB00106DC7 /* ZDPermissionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F4DBE0E220D238CB00106DC7 /* ZDPermissionManager.m */; };
 		F4DBE0E620D238E900106DC7 /* ZDPermissionPhotos.m in Sources */ = {isa = PBXBuildFile; fileRef = F4DBE0E520D238E900106DC7 /* ZDPermissionPhotos.m */; };
@@ -105,6 +108,12 @@
 		F42875032119185600502406 /* bg3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg3.png; sourceTree = "<group>"; };
 		F428750721191BDC00502406 /* CollectionViewDemoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewDemoController.h; sourceTree = "<group>"; };
 		F428750821191BDC00502406 /* CollectionViewDemoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewDemoController.m; sourceTree = "<group>"; };
+		F4341084213F7B100082C13C /* UIImageView+RoundImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+RoundImage.h"; sourceTree = "<group>"; };
+		F4341085213F7B100082C13C /* UIImageView+RoundImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+RoundImage.m"; sourceTree = "<group>"; };
+		F4341087213FA0AC0082C13C /* Singleton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
+		F4341088213FA0AC0082C13C /* Singleton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Singleton.m; sourceTree = "<group>"; };
+		F434108A213FA21A0082C13C /* SingletonViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SingletonViewController.h; sourceTree = "<group>"; };
+		F434108B213FA21A0082C13C /* SingletonViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SingletonViewController.m; sourceTree = "<group>"; };
 		F43ADD5D20D384E0002DD68F /* TestPermissionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestPermissionViewController.h; sourceTree = "<group>"; };
 		F43ADD5E20D384E0002DD68F /* TestPermissionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestPermissionViewController.m; sourceTree = "<group>"; };
 		F43ADD6020D38783002DD68F /* Product.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Product.pch; sourceTree = "<group>"; };
@@ -227,6 +236,10 @@
 				F410CADF20D0C94E003C045A /* DeviceInfoUtil.h */,
 				F410CAE020D0C94E003C045A /* DeviceInfoUtil.m */,
 				F43ADD6120D38875002DD68F /* ZDMacro.h */,
+				F4341084213F7B100082C13C /* UIImageView+RoundImage.h */,
+				F4341085213F7B100082C13C /* UIImageView+RoundImage.m */,
+				F4341087213FA0AC0082C13C /* Singleton.h */,
+				F4341088213FA0AC0082C13C /* Singleton.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -278,6 +291,8 @@
 				F405194F2134F7CB00310191 /* RoundedImageController.h */,
 				F40519502134F7CB00310191 /* RoundedImageController.m */,
 				F40519512134F7CB00310191 /* RoundedImageController.xib */,
+				F434108A213FA21A0082C13C /* SingletonViewController.h */,
+				F434108B213FA21A0082C13C /* SingletonViewController.m */,
 			);
 			path = DemoViewController;
 			sourceTree = "<group>";
@@ -466,6 +481,7 @@
 			files = (
 				F4DBE0F220D246E100106DC7 /* ZDPermissionMicrophone.m in Sources */,
 				F410CAD420D0B290003C045A /* IconUtil.m in Sources */,
+				F434108C213FA21A0082C13C /* SingletonViewController.m in Sources */,
 				F4225F2120F5CA1000114095 /* TransitionFirstViewController.m in Sources */,
 				F4DBE10A20D255CF00106DC7 /* ZDPermissionHealth.m in Sources */,
 				F43ADD5F20D384E0002DD68F /* TestPermissionViewController.m in Sources */,
@@ -479,12 +495,14 @@
 				F410CAAF20D0AF95003C045A /* main.m in Sources */,
 				F40519522134F7CB00310191 /* RoundedImageController.m in Sources */,
 				F4DBE0E920D23CA400106DC7 /* ZDPermissionCamera.m in Sources */,
+				F4341089213FA0AC0082C13C /* Singleton.m in Sources */,
 				F4ED52042119705800ADDC04 /* ZDCollectionViewCell.m in Sources */,
 				F4DBE10D20D256D500106DC7 /* ZDPermissionLocation.m in Sources */,
 				F4DBE10420D24D8C00106DC7 /* ZDPermissionCalendar.m in Sources */,
 				F410CAA120D0AF92003C045A /* AppDelegate.m in Sources */,
 				F428750921191BDC00502406 /* CollectionViewDemoController.m in Sources */,
 				F410CADE20D0C8C0003C045A /* NSString+JudgeType.m in Sources */,
+				F4341086213F7B100082C13C /* UIImageView+RoundImage.m in Sources */,
 				F4DBE0E320D238CB00106DC7 /* ZDPermissionManager.m in Sources */,
 				F4DBE10720D24E4000106DC7 /* ZDPermissionNet.m in Sources */,
 				F4225F2720F5CAC100114095 /* PresentTransition.m in Sources */,
