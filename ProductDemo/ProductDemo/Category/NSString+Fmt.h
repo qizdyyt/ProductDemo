@@ -16,8 +16,10 @@
 
 ///nil -> @""
 + (NSString *)Null2EmptyStr:(id)myVal;
+
 ///nil, @"", null -> @"null"
 + (NSString *)Null2NullStr:(id)myVal;
+
 ///是否为空字符串
 + (BOOL)isEmptyString:(NSString *)myVal;
 

@@ -34,6 +34,9 @@
 		F4341086213F7B100082C13C /* UIImageView+RoundImage.m in Sources */ = {isa = PBXBuildFile; fileRef = F4341085213F7B100082C13C /* UIImageView+RoundImage.m */; };
 		F4341089213FA0AC0082C13C /* Singleton.m in Sources */ = {isa = PBXBuildFile; fileRef = F4341088213FA0AC0082C13C /* Singleton.m */; };
 		F434108C213FA21A0082C13C /* SingletonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F434108B213FA21A0082C13C /* SingletonViewController.m */; };
+		F4341090213FB53F0082C13C /* ZDCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = F434108F213FB53F0082C13C /* ZDCycleScrollView.m */; };
+		F4341093213FB5670082C13C /* ZDCycleScrollCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F4341092213FB5670082C13C /* ZDCycleScrollCell.m */; };
+		F4341096213FB5D50082C13C /* UIView+ZDCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = F4341095213FB5D50082C13C /* UIView+ZDCategory.m */; };
 		F43ADD5F20D384E0002DD68F /* TestPermissionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F43ADD5E20D384E0002DD68F /* TestPermissionViewController.m */; };
 		F4DBE0E320D238CB00106DC7 /* ZDPermissionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F4DBE0E220D238CB00106DC7 /* ZDPermissionManager.m */; };
 		F4DBE0E620D238E900106DC7 /* ZDPermissionPhotos.m in Sources */ = {isa = PBXBuildFile; fileRef = F4DBE0E520D238E900106DC7 /* ZDPermissionPhotos.m */; };
@@ -114,6 +117,12 @@
 		F4341088213FA0AC0082C13C /* Singleton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Singleton.m; sourceTree = "<group>"; };
 		F434108A213FA21A0082C13C /* SingletonViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SingletonViewController.h; sourceTree = "<group>"; };
 		F434108B213FA21A0082C13C /* SingletonViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SingletonViewController.m; sourceTree = "<group>"; };
+		F434108E213FB53F0082C13C /* ZDCycleScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZDCycleScrollView.h; sourceTree = "<group>"; };
+		F434108F213FB53F0082C13C /* ZDCycleScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZDCycleScrollView.m; sourceTree = "<group>"; };
+		F4341091213FB5670082C13C /* ZDCycleScrollCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZDCycleScrollCell.h; sourceTree = "<group>"; };
+		F4341092213FB5670082C13C /* ZDCycleScrollCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZDCycleScrollCell.m; sourceTree = "<group>"; };
+		F4341094213FB5D50082C13C /* UIView+ZDCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+ZDCategory.h"; sourceTree = "<group>"; };
+		F4341095213FB5D50082C13C /* UIView+ZDCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+ZDCategory.m"; sourceTree = "<group>"; };
 		F43ADD5D20D384E0002DD68F /* TestPermissionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestPermissionViewController.h; sourceTree = "<group>"; };
 		F43ADD5E20D384E0002DD68F /* TestPermissionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestPermissionViewController.m; sourceTree = "<group>"; };
 		F43ADD6020D38783002DD68F /* Product.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Product.pch; sourceTree = "<group>"; };
@@ -247,6 +256,8 @@
 		F410CAD520D0B569003C045A /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				F4341094213FB5D50082C13C /* UIView+ZDCategory.h */,
+				F4341095213FB5D50082C13C /* UIView+ZDCategory.m */,
 				F410CAD920D0C788003C045A /* NSString+Fmt.h */,
 				F410CADA20D0C788003C045A /* NSString+Fmt.m */,
 				F410CADC20D0C8C0003C045A /* NSString+JudgeType.h */,
@@ -281,9 +292,21 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
+		F434108D213FB4F00082C13C /* ZDCycleScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				F434108E213FB53F0082C13C /* ZDCycleScrollView.h */,
+				F434108F213FB53F0082C13C /* ZDCycleScrollView.m */,
+				F4341091213FB5670082C13C /* ZDCycleScrollCell.h */,
+				F4341092213FB5670082C13C /* ZDCycleScrollCell.m */,
+			);
+			path = ZDCycleScrollView;
+			sourceTree = "<group>";
+		};
 		F43ADD5C20D384AC002DD68F /* DemoViewController */ = {
 			isa = PBXGroup;
 			children = (
+				F434108D213FB4F00082C13C /* ZDCycleScrollView */,
 				F4ED52002119701600ADDC04 /* CollectionViewAndEdit */,
 				F4225F1E20F5C9A800114095 /* Custom transition */,
 				F43ADD5D20D384E0002DD68F /* TestPermissionViewController.h */,
@@ -491,6 +514,7 @@
 				F410CAE520D0FA60003C045A /* DemoListViewController.m in Sources */,
 				F4DBE0EF20D2425C00106DC7 /* ZDPermissionContacts.m in Sources */,
 				F410CADB20D0C788003C045A /* NSString+Fmt.m in Sources */,
+				F4341096213FB5D50082C13C /* UIView+ZDCategory.m in Sources */,
 				F4DBE0E620D238E900106DC7 /* ZDPermissionPhotos.m in Sources */,
 				F410CAAF20D0AF95003C045A /* main.m in Sources */,
 				F40519522134F7CB00310191 /* RoundedImageController.m in Sources */,
@@ -498,6 +522,7 @@
 				F4341089213FA0AC0082C13C /* Singleton.m in Sources */,
 				F4ED52042119705800ADDC04 /* ZDCollectionViewCell.m in Sources */,
 				F4DBE10D20D256D500106DC7 /* ZDPermissionLocation.m in Sources */,
+				F4341093213FB5670082C13C /* ZDCycleScrollCell.m in Sources */,
 				F4DBE10420D24D8C00106DC7 /* ZDPermissionCalendar.m in Sources */,
 				F410CAA120D0AF92003C045A /* AppDelegate.m in Sources */,
 				F428750921191BDC00502406 /* CollectionViewDemoController.m in Sources */,
@@ -506,6 +531,7 @@
 				F4DBE0E320D238CB00106DC7 /* ZDPermissionManager.m in Sources */,
 				F4DBE10720D24E4000106DC7 /* ZDPermissionNet.m in Sources */,
 				F4225F2720F5CAC100114095 /* PresentTransition.m in Sources */,
+				F4341090213FB53F0082C13C /* ZDCycleScrollView.m in Sources */,
 				F4DBE11020D2593900106DC7 /* ZDPermissionReminders.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

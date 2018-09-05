@@ -12,6 +12,8 @@
 #import "CollectionViewDemoController.h"
 #import "RoundedImageController.h"
 #import "SingletonViewController.h"
+#import "ZDCycleScrollView.h"
+
 
 @interface DemoListViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -34,6 +36,7 @@
     self.dataArray = [NSArray arrayWithObjects:@"测试权限", @"自定义跳转动画present、push", @"Collection轮播与Edit", @"图片圆角", @"单例模式", nil];
     
     self.title = self.tmp;
+    ZDCycleScrollView *cycleView = [[ZDCycleScrollView alloc] initWithFrame:CGRectMake(0, 0, 12, 12)];
 }
 
 - (void)didReceiveMemoryWarning {
