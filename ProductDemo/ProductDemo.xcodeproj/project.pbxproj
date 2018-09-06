@@ -38,6 +38,7 @@
 		F4341093213FB5670082C13C /* ZDCycleScrollCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F4341092213FB5670082C13C /* ZDCycleScrollCell.m */; };
 		F4341096213FB5D50082C13C /* UIView+ZDCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = F4341095213FB5D50082C13C /* UIView+ZDCategory.m */; };
 		F43ADD5F20D384E0002DD68F /* TestPermissionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F43ADD5E20D384E0002DD68F /* TestPermissionViewController.m */; };
+		F4ACF6B02140C81400D1795C /* ZDCircleScrollController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4ACF6AF2140C81400D1795C /* ZDCircleScrollController.m */; };
 		F4DBE0E320D238CB00106DC7 /* ZDPermissionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F4DBE0E220D238CB00106DC7 /* ZDPermissionManager.m */; };
 		F4DBE0E620D238E900106DC7 /* ZDPermissionPhotos.m in Sources */ = {isa = PBXBuildFile; fileRef = F4DBE0E520D238E900106DC7 /* ZDPermissionPhotos.m */; };
 		F4DBE0E920D23CA400106DC7 /* ZDPermissionCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = F4DBE0E820D23CA400106DC7 /* ZDPermissionCamera.m */; };
@@ -127,6 +128,8 @@
 		F43ADD5E20D384E0002DD68F /* TestPermissionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestPermissionViewController.m; sourceTree = "<group>"; };
 		F43ADD6020D38783002DD68F /* Product.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Product.pch; sourceTree = "<group>"; };
 		F43ADD6120D38875002DD68F /* ZDMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZDMacro.h; sourceTree = "<group>"; };
+		F4ACF6AE2140C81400D1795C /* ZDCircleScrollController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZDCircleScrollController.h; sourceTree = "<group>"; };
+		F4ACF6AF2140C81400D1795C /* ZDCircleScrollController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZDCircleScrollController.m; sourceTree = "<group>"; };
 		F4DBE0E120D238CB00106DC7 /* ZDPermissionManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZDPermissionManager.h; sourceTree = "<group>"; };
 		F4DBE0E220D238CB00106DC7 /* ZDPermissionManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZDPermissionManager.m; sourceTree = "<group>"; };
 		F4DBE0E420D238E900106DC7 /* ZDPermissionPhotos.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZDPermissionPhotos.h; sourceTree = "<group>"; };
@@ -299,6 +302,8 @@
 				F434108F213FB53F0082C13C /* ZDCycleScrollView.m */,
 				F4341091213FB5670082C13C /* ZDCycleScrollCell.h */,
 				F4341092213FB5670082C13C /* ZDCycleScrollCell.m */,
+				F4ACF6AE2140C81400D1795C /* ZDCircleScrollController.h */,
+				F4ACF6AF2140C81400D1795C /* ZDCircleScrollController.m */,
 			);
 			path = ZDCycleScrollView;
 			sourceTree = "<group>";
@@ -526,6 +531,7 @@
 				F4DBE10420D24D8C00106DC7 /* ZDPermissionCalendar.m in Sources */,
 				F410CAA120D0AF92003C045A /* AppDelegate.m in Sources */,
 				F428750921191BDC00502406 /* CollectionViewDemoController.m in Sources */,
+				F4ACF6B02140C81400D1795C /* ZDCircleScrollController.m in Sources */,
 				F410CADE20D0C8C0003C045A /* NSString+JudgeType.m in Sources */,
 				F4341086213F7B100082C13C /* UIImageView+RoundImage.m in Sources */,
 				F4DBE0E320D238CB00106DC7 /* ZDPermissionManager.m in Sources */,

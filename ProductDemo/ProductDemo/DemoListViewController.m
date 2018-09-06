@@ -12,7 +12,7 @@
 #import "CollectionViewDemoController.h"
 #import "RoundedImageController.h"
 #import "SingletonViewController.h"
-#import "ZDCycleScrollView.h"
+#import "ZDCircleScrollController.h"
 
 
 @interface DemoListViewController () <UITableViewDelegate, UITableViewDataSource>
@@ -33,10 +33,9 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     
-    self.dataArray = [NSArray arrayWithObjects:@"测试权限", @"自定义跳转动画present、push", @"Collection轮播与Edit", @"图片圆角", @"单例模式", nil];
+    self.dataArray = [NSArray arrayWithObjects:@"测试权限", @"自定义跳转动画present、push", @"Collection轮播与Edit", @"图片圆角", @"单例模式", @"轮播图", nil];
     
     self.title = self.tmp;
-    ZDCycleScrollView *cycleView = [[ZDCycleScrollView alloc] initWithFrame:CGRectMake(0, 0, 12, 12)];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -85,6 +84,12 @@
             SingletonViewController *singleVC = [[SingletonViewController alloc] init];
             [self.navigationController pushViewController:singleVC animated:YES];
             
+        }
+            break;
+        case 5:
+        {
+            ZDCircleScrollController *cirlceScrollVC = [[ZDCircleScrollController alloc] init];
+            [self.navigationController pushViewController:cirlceScrollVC animated:YES];
         }
             break;
             
