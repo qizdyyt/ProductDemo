@@ -36,6 +36,7 @@
     return NO;
 }
 
+
 //原理：emoji转换成utf-8编码后是4位，中文3位，英文1位
 + (NSString *)MySQLUTF8Safe:(NSString *)aString {
     
