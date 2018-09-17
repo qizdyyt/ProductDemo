@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		86B394A471ED7A17D0ECCBBC /* Pods_ProductDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55F2AD34BE73509EFACBCCD5 /* Pods_ProductDemo.framework */; };
 		F40519522134F7CB00310191 /* RoundedImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = F40519502134F7CB00310191 /* RoundedImageController.m */; };
 		F40519532134F7CB00310191 /* RoundedImageController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F40519512134F7CB00310191 /* RoundedImageController.xib */; };
 		F410CAA120D0AF92003C045A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F410CAA020D0AF92003C045A /* AppDelegate.m */; };
@@ -71,6 +72,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		55F2AD34BE73509EFACBCCD5 /* Pods_ProductDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProductDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C607F5E80749F71F436CBDDD /* Pods-ProductDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProductDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProductDemo/Pods-ProductDemo.release.xcconfig"; sourceTree = "<group>"; };
+		E6F20B51FD082465E4A14D38 /* Pods-ProductDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProductDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProductDemo/Pods-ProductDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		F405194F2134F7CB00310191 /* RoundedImageController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RoundedImageController.h; sourceTree = "<group>"; };
 		F40519502134F7CB00310191 /* RoundedImageController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RoundedImageController.m; sourceTree = "<group>"; };
 		F40519512134F7CB00310191 /* RoundedImageController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoundedImageController.xib; sourceTree = "<group>"; };
@@ -162,6 +166,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86B394A471ED7A17D0ECCBBC /* Pods_ProductDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,6 +187,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B7EADFAECE87E256A8E3EEEC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E6F20B51FD082465E4A14D38 /* Pods-ProductDemo.debug.xcconfig */,
+				C607F5E80749F71F436CBDDD /* Pods-ProductDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EB553BAF83D1F8B528074977 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				55F2AD34BE73509EFACBCCD5 /* Pods_ProductDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F410CA9320D0AF92003C045A = {
 			isa = PBXGroup;
 			children = (
@@ -189,6 +211,8 @@
 				F410CAB720D0AF95003C045A /* ProductDemoTests */,
 				F410CAC220D0AF95003C045A /* ProductDemoUITests */,
 				F410CA9D20D0AF92003C045A /* Products */,
+				B7EADFAECE87E256A8E3EEEC /* Pods */,
+				EB553BAF83D1F8B528074977 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -383,9 +407,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F410CAC820D0AF95003C045A /* Build configuration list for PBXNativeTarget "ProductDemo" */;
 			buildPhases = (
+				6795C240D527274760A6A516 /* [CP] Check Pods Manifest.lock */,
 				F410CA9820D0AF92003C045A /* Sources */,
 				F410CA9920D0AF92003C045A /* Frameworks */,
 				F410CA9A20D0AF92003C045A /* Resources */,
+				D4964A328B315EB9897DC671 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -506,6 +532,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6795C240D527274760A6A516 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ProductDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D4964A328B315EB9897DC671 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ProductDemo/Pods-ProductDemo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ProductDemo/Pods-ProductDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F410CA9820D0AF92003C045A /* Sources */ = {
@@ -711,6 +776,7 @@
 		};
 		F410CAC920D0AF95003C045A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6F20B51FD082465E4A14D38 /* Pods-ProductDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -720,10 +786,7 @@
 				GCC_PREFIX_HEADER = ProductDemo/Product.pch;
 				INFOPLIST_FILE = ProductDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = zidong.ProductDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -732,6 +795,7 @@
 		};
 		F410CACA20D0AF95003C045A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C607F5E80749F71F436CBDDD /* Pods-ProductDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -741,10 +805,7 @@
 				GCC_PREFIX_HEADER = ProductDemo/Product.pch;
 				INFOPLIST_FILE = ProductDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = zidong.ProductDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -758,11 +819,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B7QX9LL49R;
 				INFOPLIST_FILE = ProductDemoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = zidong.ProductDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -777,11 +834,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B7QX9LL49R;
 				INFOPLIST_FILE = ProductDemoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = zidong.ProductDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -795,11 +848,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B7QX9LL49R;
 				INFOPLIST_FILE = ProductDemoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = zidong.ProductDemoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -813,11 +862,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B7QX9LL49R;
 				INFOPLIST_FILE = ProductDemoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = zidong.ProductDemoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -54,4 +54,45 @@
     
     return tempString;
 }
+
+- (NSString *)EI_stringByPadRight:(NSUInteger)totalWidth{
+    return [self EI_stringByPadRight:totalWidth paddingChar:' '];
+}
+- (NSString *)EI_stringByPadRight:(NSUInteger)totalWidth paddingChar:(char)paddingChar{
+    
+    if ([self length] >= totalWidth)
+        return self;
+    
+    NSMutableString *paddedString = [NSMutableString stringWithFormat:@"%@", self];
+    
+    while (paddedString.length < totalWidth)
+    {
+        [paddedString appendString:[NSString stringWithFormat:@"%c",paddingChar]];
+    }
+    
+    return paddedString;
+}
+
+- (NSString *)EI_stringByPadLeft:(NSUInteger)totalWidth{
+    
+    return [self EI_stringByPadLeft:totalWidth paddingChar:' '];
+}
+- (NSString *)EI_stringByPadLeft:(NSUInteger)totalWidth paddingChar:(char)paddingChar{
+    
+    if ([self length] >= totalWidth)
+        return self;
+    
+    NSInteger strLength = [self length];
+    NSMutableString *paddedString = [NSMutableString string];
+    
+    while ([paddedString length] < totalWidth - strLength)
+    {
+        [paddedString appendString:[NSString stringWithFormat:@"%c",paddingChar]];
+    }
+    
+    [paddedString appendString:[NSMutableString stringWithFormat:@"%@", self]];
+    
+    return paddedString;
+}
+
 @end
