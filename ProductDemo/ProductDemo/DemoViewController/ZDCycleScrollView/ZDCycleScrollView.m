@@ -17,6 +17,9 @@ typedef enum {
 
 @interface ZDCycleScrollView ()<UICollectionViewDelegate, UICollectionViewDataSource>
 
+//图片数量
+@property (nonatomic, assign) NSInteger itemCount;
+
 @property (nonatomic, weak) UICollectionView *mainView; // 显示图片的collectionView
 @property (nonatomic, weak) UICollectionViewFlowLayout *flowLayout;
 
@@ -49,6 +52,10 @@ NSString *const cellID = @"ZDCycleScrollCell";
 }
 
 - (void)initinitialization {
+    _autoScroll = YES;
+    _autoScrollTimeInterval = 2.0;
+    _showPageControl = YES;
+    _infiniteLoop = YES;
     
 }
 
@@ -92,7 +99,7 @@ NSString *const cellID = @"ZDCycleScrollCell";
             
             break;
         case ZDCycleScrollDataSouceTypeLocal:
-            cell.imageView.image = [UIImage imageNamed:self.imageNames[indexPath.row]];
+            cell.imageView.image = [UIImage imageNamed:self.imageNames[indexPath.row % self.imageNames.count]];
             break;
         default:
             break;
@@ -112,25 +119,91 @@ NSString *const cellID = @"ZDCycleScrollCell";
     return self.itemCount;
 }
 
+- (void)setupTimer {
+    [self invalidateTimer];// 创建定时器前先停止定时器，不然会出现僵尸定时器，导致轮播频率错误
+    NSTimer *timer = [NSTimer timerWithTimeInterval:self.autoScrollTimeInterval target:self selector:@selector(automaticScroll) userInfo:nil repeats:YES];
+    _timer = timer;
+    [[NSRunLoop mainRunLoop] addTimer:_timer forMode:NSRunLoopCommonModes];
+}
+
+- (void)invalidateTimer {
+    [_timer invalidate];
+    _timer = nil;
+}
+
+- (void)automaticScroll {
+    if (_itemCount == 0) {
+        return;
+    }
+    int currentIndex = [self currentIndex];
+    int targetIndex = currentIndex + 1;
+    [self scrollToIndex:targetIndex];
+}
+
+- (void)scrollToIndex:(int)targetIndex {
+    if (targetIndex >= _itemCount) {
+        if (self.infiniteLoop) {
+            targetIndex = _itemCount * 0.5;
+            [_mainView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:targetIndex inSection:0] atScrollPosition:UICollectionViewScrollPositionNone animated:NO];
+        }
+        return;
+    }
+    [_mainView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:targetIndex inSection:0] atScrollPosition:UICollectionViewScrollPositionNone animated:YES];
+}
+
+- (int)currentIndex {
+    if (_mainView.zd_width == 0 || _mainView.zd_height == 0) {
+        return 0;
+    }
+    int index = 0;
+    if (_flowLayout.scrollDirection == UICollectionViewScrollDirectionVertical) {
+        index = (_mainView.contentOffset.y + _flowLayout.itemSize.height * 0.5) / _flowLayout.itemSize.height;
+    }else {
+        index = (_mainView.contentOffset.x + _flowLayout.itemSize.width * 0.5) / _flowLayout.itemSize.width;
+    }
+    return MAX(0, index);
+}
+
 #pragma mark - setter ----- getter
 
-- (NSInteger)itemCount {
-    if (self.imageNames) {
-        return self.imageNames.count;
-    }else if(self.imageUrlList) {
-        return self.imageUrlList.count;
-    }
-    return 0;
+//- (NSInteger)itemCount {
+//    if (self.imageNames) {
+//        return self.imageNames.count;
+//    }else if(self.imageUrlList) {
+//        return self.imageUrlList.count;
+//    }
+//    return 0;
+//}
+
+- (void)setItemCount:(NSInteger)itemCount {
+    _itemCount = self.infiniteLoop ? itemCount * 100 : itemCount;
 }
 
 - (void)setImageNames:(NSArray *)imageNames {
     _imageNames = imageNames;
     self.datasouceType = ZDCycleScrollDataSouceTypeLocal;
+    self.itemCount = imageNames.count;
+    if (_autoScroll) {
+        [self setupTimer];
+    }
 }
 
 - (void)setImageUrlList:(NSArray *)imageUrlList {
     _imageUrlList = imageUrlList;
     self.datasouceType = ZDCycleScrollDataSouceTypeNet;
+    self.itemCount = imageUrlList.count;
+    if (_autoScroll) {
+        [self setupTimer];
+    }
+}
+
+- (void)setDelegate:(id<ZDCycleScrollViewDelegate>)delegate {
+    _delegate = delegate;
+}
+
+- (void)setAutoScroll:(BOOL)autoScroll {
+    _autoScroll = autoScroll;
+    
 }
 
 @end
