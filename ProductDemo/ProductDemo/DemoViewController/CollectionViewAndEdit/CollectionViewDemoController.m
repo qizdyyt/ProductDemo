@@ -106,7 +106,7 @@ NSString * const ReuseIdentifier = @"CellID";
     id obj = [_data objectAtIndex:sourceIndexPath.item];
     [_data removeObject:obj];
     [_data insertObject:obj atIndex:destinationIndexPath.item];
-    [self.collectionView performSelector:@selector(reloadData) withObject:nil afterDelay:0.5];
+//    [self.collectionView performSelector:@selector(reloadData) withObject:nil afterDelay:0.5];
 }
 
 
