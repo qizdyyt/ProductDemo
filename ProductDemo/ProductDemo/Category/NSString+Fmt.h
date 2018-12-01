@@ -26,5 +26,7 @@
 ///删除字符串中的emoji
 + (NSString *)MySQLUTF8Safe:(NSString *)aString;
 
+- (NSString *)EI_stringByPadRight:(NSUInteger)totalWidth;
 
+- (NSString *)EI_stringByPadLeft:(NSUInteger)totalWidth;
 @end

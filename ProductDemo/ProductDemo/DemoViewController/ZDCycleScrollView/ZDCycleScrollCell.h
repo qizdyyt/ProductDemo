@@ -10,4 +10,9 @@
 
 @interface ZDCycleScrollCell : UICollectionViewCell
 
+@property (strong, nonatomic) UIImageView *imageView;
+@property (copy, nonatomic) NSString *title;
+
+@property (nonatomic, assign) CGFloat titleHeight;
+
 @end

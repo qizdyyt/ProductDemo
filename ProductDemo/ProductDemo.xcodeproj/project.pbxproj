@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		86B394A471ED7A17D0ECCBBC /* Pods_ProductDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55F2AD34BE73509EFACBCCD5 /* Pods_ProductDemo.framework */; };
 		F40519522134F7CB00310191 /* RoundedImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = F40519502134F7CB00310191 /* RoundedImageController.m */; };
 		F40519532134F7CB00310191 /* RoundedImageController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F40519512134F7CB00310191 /* RoundedImageController.xib */; };
+		F410488421A27CA700D2550E /* UIColor+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = F410488321A27CA700D2550E /* UIColor+Util.m */; };
+		F410488821A289C000D2550E /* ZDAlertUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = F410488721A289C000D2550E /* ZDAlertUtil.m */; };
 		F410CAA120D0AF92003C045A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F410CAA020D0AF92003C045A /* AppDelegate.m */; };
 		F410CAA720D0AF92003C045A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F410CAA520D0AF92003C045A /* Main.storyboard */; };
 		F410CAA920D0AF95003C045A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F410CAA820D0AF95003C045A /* Assets.xcassets */; };
@@ -38,6 +41,7 @@
 		F4341093213FB5670082C13C /* ZDCycleScrollCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F4341092213FB5670082C13C /* ZDCycleScrollCell.m */; };
 		F4341096213FB5D50082C13C /* UIView+ZDCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = F4341095213FB5D50082C13C /* UIView+ZDCategory.m */; };
 		F43ADD5F20D384E0002DD68F /* TestPermissionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F43ADD5E20D384E0002DD68F /* TestPermissionViewController.m */; };
+		F43D5392214643CB00449C2C /* ZDCircleScrollView_son.m in Sources */ = {isa = PBXBuildFile; fileRef = F43D5390214643CA00449C2C /* ZDCircleScrollView_son.m */; };
 		F4ACF6B02140C81400D1795C /* ZDCircleScrollController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4ACF6AF2140C81400D1795C /* ZDCircleScrollController.m */; };
 		F4DBE0E320D238CB00106DC7 /* ZDPermissionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F4DBE0E220D238CB00106DC7 /* ZDPermissionManager.m */; };
 		F4DBE0E620D238E900106DC7 /* ZDPermissionPhotos.m in Sources */ = {isa = PBXBuildFile; fileRef = F4DBE0E520D238E900106DC7 /* ZDPermissionPhotos.m */; };
@@ -70,9 +74,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		55F2AD34BE73509EFACBCCD5 /* Pods_ProductDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProductDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C607F5E80749F71F436CBDDD /* Pods-ProductDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProductDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProductDemo/Pods-ProductDemo.release.xcconfig"; sourceTree = "<group>"; };
+		E6F20B51FD082465E4A14D38 /* Pods-ProductDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProductDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProductDemo/Pods-ProductDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		F405194F2134F7CB00310191 /* RoundedImageController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RoundedImageController.h; sourceTree = "<group>"; };
 		F40519502134F7CB00310191 /* RoundedImageController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RoundedImageController.m; sourceTree = "<group>"; };
 		F40519512134F7CB00310191 /* RoundedImageController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoundedImageController.xib; sourceTree = "<group>"; };
+		F410488221A27CA700D2550E /* UIColor+Util.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Util.h"; sourceTree = "<group>"; };
+		F410488321A27CA700D2550E /* UIColor+Util.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Util.m"; sourceTree = "<group>"; };
+		F410488621A289C000D2550E /* ZDAlertUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZDAlertUtil.h; sourceTree = "<group>"; };
+		F410488721A289C000D2550E /* ZDAlertUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZDAlertUtil.m; sourceTree = "<group>"; };
 		F410CA9C20D0AF92003C045A /* ProductDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProductDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F410CA9F20D0AF92003C045A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F410CAA020D0AF92003C045A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -128,6 +139,8 @@
 		F43ADD5E20D384E0002DD68F /* TestPermissionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestPermissionViewController.m; sourceTree = "<group>"; };
 		F43ADD6020D38783002DD68F /* Product.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Product.pch; sourceTree = "<group>"; };
 		F43ADD6120D38875002DD68F /* ZDMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZDMacro.h; sourceTree = "<group>"; };
+		F43D5390214643CA00449C2C /* ZDCircleScrollView_son.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZDCircleScrollView_son.m; sourceTree = "<group>"; };
+		F43D5391214643CA00449C2C /* ZDCircleScrollView_son.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZDCircleScrollView_son.h; sourceTree = "<group>"; };
 		F4ACF6AE2140C81400D1795C /* ZDCircleScrollController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZDCircleScrollController.h; sourceTree = "<group>"; };
 		F4ACF6AF2140C81400D1795C /* ZDCircleScrollController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZDCircleScrollController.m; sourceTree = "<group>"; };
 		F4DBE0E120D238CB00106DC7 /* ZDPermissionManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZDPermissionManager.h; sourceTree = "<group>"; };
@@ -159,6 +172,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86B394A471ED7A17D0ECCBBC /* Pods_ProductDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,6 +193,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B7EADFAECE87E256A8E3EEEC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E6F20B51FD082465E4A14D38 /* Pods-ProductDemo.debug.xcconfig */,
+				C607F5E80749F71F436CBDDD /* Pods-ProductDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EB553BAF83D1F8B528074977 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				55F2AD34BE73509EFACBCCD5 /* Pods_ProductDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F410488521A2898B00D2550E /* UIControlUtil */ = {
+			isa = PBXGroup;
+			children = (
+				F410488621A289C000D2550E /* ZDAlertUtil.h */,
+				F410488721A289C000D2550E /* ZDAlertUtil.m */,
+			);
+			path = UIControlUtil;
+			sourceTree = "<group>";
+		};
 		F410CA9320D0AF92003C045A = {
 			isa = PBXGroup;
 			children = (
@@ -186,6 +226,8 @@
 				F410CAB720D0AF95003C045A /* ProductDemoTests */,
 				F410CAC220D0AF95003C045A /* ProductDemoUITests */,
 				F410CA9D20D0AF92003C045A /* Products */,
+				B7EADFAECE87E256A8E3EEEC /* Pods */,
+				EB553BAF83D1F8B528074977 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -202,6 +244,7 @@
 		F410CA9E20D0AF92003C045A /* ProductDemo */ = {
 			isa = PBXGroup;
 			children = (
+				F410488521A2898B00D2550E /* UIControlUtil */,
 				F410CAD520D0B569003C045A /* Category */,
 				F410CAD120D0B27C003C045A /* Tools */,
 				F43ADD5C20D384AC002DD68F /* DemoViewController */,
@@ -252,6 +295,8 @@
 				F4341085213F7B100082C13C /* UIImageView+RoundImage.m */,
 				F4341087213FA0AC0082C13C /* Singleton.h */,
 				F4341088213FA0AC0082C13C /* Singleton.m */,
+				F410488221A27CA700D2550E /* UIColor+Util.h */,
+				F410488321A27CA700D2550E /* UIColor+Util.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -302,8 +347,8 @@
 				F434108F213FB53F0082C13C /* ZDCycleScrollView.m */,
 				F4341091213FB5670082C13C /* ZDCycleScrollCell.h */,
 				F4341092213FB5670082C13C /* ZDCycleScrollCell.m */,
-				F4ACF6AE2140C81400D1795C /* ZDCircleScrollController.h */,
-				F4ACF6AF2140C81400D1795C /* ZDCircleScrollController.m */,
+				F43D5391214643CA00449C2C /* ZDCircleScrollView_son.h */,
+				F43D5390214643CA00449C2C /* ZDCircleScrollView_son.m */,
 			);
 			path = ZDCycleScrollView;
 			sourceTree = "<group>";
@@ -312,6 +357,8 @@
 			isa = PBXGroup;
 			children = (
 				F434108D213FB4F00082C13C /* ZDCycleScrollView */,
+				F4ACF6AE2140C81400D1795C /* ZDCircleScrollController.h */,
+				F4ACF6AF2140C81400D1795C /* ZDCircleScrollController.m */,
 				F4ED52002119701600ADDC04 /* CollectionViewAndEdit */,
 				F4225F1E20F5C9A800114095 /* Custom transition */,
 				F43ADD5D20D384E0002DD68F /* TestPermissionViewController.h */,
@@ -378,9 +425,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F410CAC820D0AF95003C045A /* Build configuration list for PBXNativeTarget "ProductDemo" */;
 			buildPhases = (
+				6795C240D527274760A6A516 /* [CP] Check Pods Manifest.lock */,
 				F410CA9820D0AF92003C045A /* Sources */,
 				F410CA9920D0AF92003C045A /* Frameworks */,
 				F410CA9A20D0AF92003C045A /* Resources */,
+				D4964A328B315EB9897DC671 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -502,12 +551,52 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6795C240D527274760A6A516 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ProductDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D4964A328B315EB9897DC671 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ProductDemo/Pods-ProductDemo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ProductDemo/Pods-ProductDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F410CA9820D0AF92003C045A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				F4DBE0F220D246E100106DC7 /* ZDPermissionMicrophone.m in Sources */,
+				F410488421A27CA700D2550E /* UIColor+Util.m in Sources */,
 				F410CAD420D0B290003C045A /* IconUtil.m in Sources */,
 				F434108C213FA21A0082C13C /* SingletonViewController.m in Sources */,
 				F4225F2120F5CA1000114095 /* TransitionFirstViewController.m in Sources */,
@@ -532,11 +621,13 @@
 				F410CAA120D0AF92003C045A /* AppDelegate.m in Sources */,
 				F428750921191BDC00502406 /* CollectionViewDemoController.m in Sources */,
 				F4ACF6B02140C81400D1795C /* ZDCircleScrollController.m in Sources */,
+				F43D5392214643CB00449C2C /* ZDCircleScrollView_son.m in Sources */,
 				F410CADE20D0C8C0003C045A /* NSString+JudgeType.m in Sources */,
 				F4341086213F7B100082C13C /* UIImageView+RoundImage.m in Sources */,
 				F4DBE0E320D238CB00106DC7 /* ZDPermissionManager.m in Sources */,
 				F4DBE10720D24E4000106DC7 /* ZDPermissionNet.m in Sources */,
 				F4225F2720F5CAC100114095 /* PresentTransition.m in Sources */,
+				F410488821A289C000D2550E /* ZDAlertUtil.m in Sources */,
 				F4341090213FB53F0082C13C /* ZDCycleScrollView.m in Sources */,
 				F4DBE11020D2593900106DC7 /* ZDPermissionReminders.m in Sources */,
 			);
@@ -705,6 +796,7 @@
 		};
 		F410CAC920D0AF95003C045A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6F20B51FD082465E4A14D38 /* Pods-ProductDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -726,6 +818,7 @@
 		};
 		F410CACA20D0AF95003C045A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C607F5E80749F71F436CBDDD /* Pods-ProductDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

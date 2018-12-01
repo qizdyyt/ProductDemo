@@ -21,7 +21,10 @@
     self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"轮播图";
     
-    ZDCycleScrollView *cycleView = [[ZDCycleScrollView alloc] initWithFrame:CGRectMake(0, 0, 12, 12)];
+    NSArray *imageList = @[@"bg1", @"bg2", @"bg3"];
+    
+    ZDCycleScrollView *cycleView = [[ZDCycleScrollView alloc] initWithFrame:self.view.bounds];
+    cycleView.imageNames = imageList;
     [self.view addSubview:cycleView];
 }
 

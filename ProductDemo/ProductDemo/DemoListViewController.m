@@ -13,6 +13,7 @@
 #import "RoundedImageController.h"
 #import "SingletonViewController.h"
 #import "ZDCircleScrollController.h"
+#import "NSString+Fmt.h"
 
 
 @interface DemoListViewController () <UITableViewDelegate, UITableViewDataSource>
@@ -35,7 +36,8 @@
     
     self.dataArray = [NSArray arrayWithObjects:@"测试权限", @"自定义跳转动画present、push", @"Collection轮播与Edit", @"图片圆角", @"单例模式", @"轮播图", nil];
     
-    self.title = self.tmp;
+    
+    self.title = [self.title substringToIndex:[self.title length] - 3];
 }
 
 - (void)didReceiveMemoryWarning {
