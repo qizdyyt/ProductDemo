@@ -23,7 +23,7 @@
     DemoListViewController *viewController = [[DemoListViewController alloc] initWithNibName:@"DemoListViewController" bundle:nil];
     self.rootVC = [[UINavigationController alloc] initWithRootViewController:viewController];
     
-    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:self.rootVC];
+    self.window.rootViewController = self.rootVC;
     [self.window makeKeyAndVisible];
     return YES;
 }

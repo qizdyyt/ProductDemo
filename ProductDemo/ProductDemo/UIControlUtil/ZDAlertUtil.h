@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-
+///Alert提示工具
 @interface ZDAlertUtil : NSObject
 
 + (void)showAlert:(NSString *)title message:(NSString *)message presenter:(UIViewController *)presenterVC;
@@ -21,7 +21,7 @@
 + (void)showAlert:(NSString *)title message:(NSString *)message presenter:(UIViewController *)presenterVC cancel:(UIAlertAction *)cancelAction actions:(NSArray *)actionsArray;
 
 /*------
- Action
+ ActionSheet
  
  -----*/
 + (void)showActionSheet:(NSString *)title message:(NSString *)message cancelTitle:(NSString *)cancelButtonTitle presenter:(UIViewController *)presenterVC;

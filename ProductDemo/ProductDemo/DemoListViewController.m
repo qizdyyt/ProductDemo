@@ -13,6 +13,9 @@
 #import "RoundedImageController.h"
 #import "SingletonViewController.h"
 #import "ZDCircleScrollController.h"
+#import "AttributedTextViewController.h"
+#import "CollectionAndTable.h"
+
 #import "NSString+Fmt.h"
 
 
@@ -34,7 +37,7 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     
-    self.dataArray = [NSArray arrayWithObjects:@"测试权限", @"自定义跳转动画present、push", @"Collection轮播与Edit", @"图片圆角", @"单例模式", @"轮播图", nil];
+    self.dataArray = [NSArray arrayWithObjects:@"测试权限", @"自定义跳转动画present、push", @"Collection轮播与Edit", @"图片圆角", @"单例模式", @"轮播图", @"多样式的字符串", @"tableView嵌套CollectionView", nil];
     
     
     self.title = [self.title substringToIndex:[self.title length] - 3];
@@ -92,6 +95,18 @@
         {
             ZDCircleScrollController *cirlceScrollVC = [[ZDCircleScrollController alloc] init];
             [self.navigationController pushViewController:cirlceScrollVC animated:YES];
+        }
+            
+        case 6:
+        {
+            AttributedTextViewController *VC = [[AttributedTextViewController alloc] init];
+            [self.navigationController pushViewController:VC animated:YES];
+        }
+            break;
+        case 7:
+        {
+            CollectionAndTable *VC = [[CollectionAndTable alloc] init];
+            [self.navigationController pushViewController:VC animated:YES];
         }
             break;
             

@@ -34,12 +34,14 @@
 		F42875042119185600502406 /* bg4.png in Resources */ = {isa = PBXBuildFile; fileRef = F42875022119185500502406 /* bg4.png */; };
 		F42875052119185600502406 /* bg3.png in Resources */ = {isa = PBXBuildFile; fileRef = F42875032119185600502406 /* bg3.png */; };
 		F428750921191BDC00502406 /* CollectionViewDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = F428750821191BDC00502406 /* CollectionViewDemoController.m */; };
+		F42E2C8A21AFB55F00BEAAE8 /* AttributedTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F42E2C8921AFB55F00BEAAE8 /* AttributedTextViewController.m */; };
 		F4341086213F7B100082C13C /* UIImageView+RoundImage.m in Sources */ = {isa = PBXBuildFile; fileRef = F4341085213F7B100082C13C /* UIImageView+RoundImage.m */; };
 		F4341089213FA0AC0082C13C /* Singleton.m in Sources */ = {isa = PBXBuildFile; fileRef = F4341088213FA0AC0082C13C /* Singleton.m */; };
 		F434108C213FA21A0082C13C /* SingletonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F434108B213FA21A0082C13C /* SingletonViewController.m */; };
 		F4341090213FB53F0082C13C /* ZDCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = F434108F213FB53F0082C13C /* ZDCycleScrollView.m */; };
 		F4341093213FB5670082C13C /* ZDCycleScrollCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F4341092213FB5670082C13C /* ZDCycleScrollCell.m */; };
 		F4341096213FB5D50082C13C /* UIView+ZDCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = F4341095213FB5D50082C13C /* UIView+ZDCategory.m */; };
+		F435D88921BF32F30049460D /* CollectionAndTable.m in Sources */ = {isa = PBXBuildFile; fileRef = F435D88821BF32F30049460D /* CollectionAndTable.m */; };
 		F43ADD5F20D384E0002DD68F /* TestPermissionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F43ADD5E20D384E0002DD68F /* TestPermissionViewController.m */; };
 		F43D5392214643CB00449C2C /* ZDCircleScrollView_son.m in Sources */ = {isa = PBXBuildFile; fileRef = F43D5390214643CA00449C2C /* ZDCircleScrollView_son.m */; };
 		F4ACF6B02140C81400D1795C /* ZDCircleScrollController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4ACF6AF2140C81400D1795C /* ZDCircleScrollController.m */; };
@@ -123,6 +125,8 @@
 		F42875032119185600502406 /* bg3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg3.png; sourceTree = "<group>"; };
 		F428750721191BDC00502406 /* CollectionViewDemoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewDemoController.h; sourceTree = "<group>"; };
 		F428750821191BDC00502406 /* CollectionViewDemoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewDemoController.m; sourceTree = "<group>"; };
+		F42E2C8821AFB55F00BEAAE8 /* AttributedTextViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AttributedTextViewController.h; sourceTree = "<group>"; };
+		F42E2C8921AFB55F00BEAAE8 /* AttributedTextViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AttributedTextViewController.m; sourceTree = "<group>"; };
 		F4341084213F7B100082C13C /* UIImageView+RoundImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+RoundImage.h"; sourceTree = "<group>"; };
 		F4341085213F7B100082C13C /* UIImageView+RoundImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+RoundImage.m"; sourceTree = "<group>"; };
 		F4341087213FA0AC0082C13C /* Singleton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
@@ -135,6 +139,8 @@
 		F4341092213FB5670082C13C /* ZDCycleScrollCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZDCycleScrollCell.m; sourceTree = "<group>"; };
 		F4341094213FB5D50082C13C /* UIView+ZDCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+ZDCategory.h"; sourceTree = "<group>"; };
 		F4341095213FB5D50082C13C /* UIView+ZDCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+ZDCategory.m"; sourceTree = "<group>"; };
+		F435D88721BF32F30049460D /* CollectionAndTable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionAndTable.h; sourceTree = "<group>"; };
+		F435D88821BF32F30049460D /* CollectionAndTable.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionAndTable.m; sourceTree = "<group>"; };
 		F43ADD5D20D384E0002DD68F /* TestPermissionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestPermissionViewController.h; sourceTree = "<group>"; };
 		F43ADD5E20D384E0002DD68F /* TestPermissionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestPermissionViewController.m; sourceTree = "<group>"; };
 		F43ADD6020D38783002DD68F /* Product.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Product.pch; sourceTree = "<group>"; };
@@ -368,6 +374,10 @@
 				F40519512134F7CB00310191 /* RoundedImageController.xib */,
 				F434108A213FA21A0082C13C /* SingletonViewController.h */,
 				F434108B213FA21A0082C13C /* SingletonViewController.m */,
+				F42E2C8821AFB55F00BEAAE8 /* AttributedTextViewController.h */,
+				F42E2C8921AFB55F00BEAAE8 /* AttributedTextViewController.m */,
+				F435D88721BF32F30049460D /* CollectionAndTable.h */,
+				F435D88821BF32F30049460D /* CollectionAndTable.m */,
 			);
 			path = DemoViewController;
 			sourceTree = "<group>";
@@ -599,11 +609,13 @@
 				F410488421A27CA700D2550E /* UIColor+Util.m in Sources */,
 				F410CAD420D0B290003C045A /* IconUtil.m in Sources */,
 				F434108C213FA21A0082C13C /* SingletonViewController.m in Sources */,
+				F435D88921BF32F30049460D /* CollectionAndTable.m in Sources */,
 				F4225F2120F5CA1000114095 /* TransitionFirstViewController.m in Sources */,
 				F4DBE10A20D255CF00106DC7 /* ZDPermissionHealth.m in Sources */,
 				F43ADD5F20D384E0002DD68F /* TestPermissionViewController.m in Sources */,
 				F4225F2F20F5DBEF00114095 /* DismissTransition.m in Sources */,
 				F410CAE120D0C94E003C045A /* DeviceInfoUtil.m in Sources */,
+				F42E2C8A21AFB55F00BEAAE8 /* AttributedTextViewController.m in Sources */,
 				F4225F2420F5CA2F00114095 /* TransitionSecondViewController.m in Sources */,
 				F410CAE520D0FA60003C045A /* DemoListViewController.m in Sources */,
 				F4DBE0EF20D2425C00106DC7 /* ZDPermissionContacts.m in Sources */,
