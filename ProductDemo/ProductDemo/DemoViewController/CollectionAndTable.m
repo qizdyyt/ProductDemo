@@ -9,6 +9,14 @@
 #import "CollectionAndTable.h"
 #import "ZDCollectionViewCell.h"
 
+typedef NS_ENUM(NSUInteger, DragCellDirection) {
+    DragCellDirectionNone = 0,
+    DragCellDirectionLeft,
+    DragCellDirectionRight,
+    DragCellDirectionUp,
+    DragCellDirectionDown,
+};
+
 @interface CollectionAndTable ()<UITableViewDelegate, UITableViewDataSource, UICollectionViewDelegate, UICollectionViewDataSource>
 
 @property (nonatomic, retain) UITableView *tableView;
@@ -17,15 +25,16 @@
 
 @property (nonatomic, retain) NSIndexPath *originIndexPath;
 @property (nonatomic, retain) UICollectionViewCell *orignalCell;
+@property (nonatomic, retain) UICollectionView *originCollectionView;
 @property (nonatomic, assign) CGPoint originCenter;
-@property (nonatomic, strong) NSIndexPath *moveIndexPath;
+@property (nonatomic, strong) NSIndexPath *currentIndexPath;
 
 @property (nonatomic, retain) UIView *tmpMoveView;
 @property (nonatomic, weak) UILongPressGestureRecognizer *longPressGesture;
 
 @property (nonatomic, retain) CADisplayLink *edgeTimer;
 @property (nonatomic, assign) CGPoint lastPoint;
-@property (nonatomic) BOOL isPanning;
+@property (nonatomic) BOOL isDraging;
 
 
 @end
@@ -136,11 +145,12 @@ NSString *const collectionId = @"collectionId";
 - (void)gestureBegan:(UILongPressGestureRecognizer *)longPressGesture {
     CGPoint pointInCollection = [longPressGesture locationInView:longPressGesture.view];
     UICollectionView *gestureView = (UICollectionView*)longPressGesture.view;
+    self.originCollectionView = gestureView;
     NSIndexPath *oriIndexPath = [gestureView indexPathForItemAtPoint:pointInCollection];
-    NSLog(@"%@", oriIndexPath);
     if (!oriIndexPath) {//oriIndexPath要存在，表示点击位置在cell里面
         return;
     }
+    self.isDraging = YES;
     self.originIndexPath = oriIndexPath;
     UICollectionViewCell *cell = [gestureView cellForItemAtIndexPath:oriIndexPath];
     if(self.tmpMoveView) {
@@ -159,6 +169,7 @@ NSString *const collectionId = @"collectionId";
     //隐藏原来cell
     cell.hidden = YES;
     self.orignalCell = cell;
+    self.originCenter = cell.center;
     self.tmpMoveView.frame = cell.frame;
     //动画放大并移动到触摸点下
     [UIView animateWithDuration:0.25 animations:^{
@@ -176,6 +187,7 @@ NSString *const collectionId = @"collectionId";
     }
     //当前手指位置
     self.lastPoint = [longPressGesture locationInView:longPressGesture.view];
+    NSLog(@"________________________%@", NSStringFromCGPoint(self.lastPoint));
     //移动截图
     [UIView animateWithDuration:0.1 animations:^{
         self.tmpMoveView.center = self.lastPoint;
@@ -185,6 +197,15 @@ NSString *const collectionId = @"collectionId";
     if (!index) {
         return;
     }
+    self.currentIndexPath = index;
+    self.originCenter = [self.originCollectionView cellForItemAtIndexPath:_currentIndexPath].center;
+    //更新数据
+    [self updateSourceData];
+    // 移动 会调用willMoveToIndexPath方法更新数据源
+    [self.originCollectionView moveItemAtIndexPath:_originIndexPath toIndexPath:_currentIndexPath];
+    
+    self.originIndexPath = self.currentIndexPath;
+    [self.originCollectionView reloadItemsAtIndexPaths:@[self.originIndexPath]];
     
 }
 
@@ -231,6 +252,33 @@ NSString *const collectionId = @"collectionId";
  *  监听手势的取消或结束
  */
 - (void)gestureEndOrCancle:(UILongPressGestureRecognizer *)longPressGesture {
+    if (!self.originIndexPath) {
+        return;
+    }
+    // 结束动画过程中停止交互，防止出问题
+    self.originCollectionView.userInteractionEnabled = NO;
+    UICollectionViewCell *cell = [self.originCollectionView cellForItemAtIndexPath:_originIndexPath];
+    // 结束拖拽了
+    self.isDraging = NO;
+    // 给截图视图一个动画移动到隐藏cell的新位置
+    [UIView animateWithDuration:0.25 animations:^{
+        if (!cell) {
+            self.tmpMoveView.center = self.originCenter;
+        } else {
+            self.tmpMoveView.center = cell.center;
+        }
+        self.tmpMoveView.transform = CGAffineTransformMakeScale(1.0f, 1.0f);
+        self.tmpMoveView.alpha = 1.0;
+    } completion:^(BOOL finished) {
+        // 移除截图视图、显示隐藏的cell并开启交互
+        [self.tmpMoveView removeFromSuperview];
+        self.tmpMoveView = nil;
+        cell.hidden = NO;
+        self.originCollectionView.userInteractionEnabled = YES;
+    }];
+    // 关闭定时器
+    self.originIndexPath = nil;
+    [self _stopEdgeTimer];
     
 }
 
@@ -247,6 +295,55 @@ NSString *const collectionId = @"collectionId";
         [_edgeTimer invalidate];
         _edgeTimer = nil;
     }
+}
+
+//监听是否拖动到边缘,并处理
+- (void)_edgeScroll {
+    DragCellDirection dirction = [self getDragDirection];
+    NSLog(@"+++++++++++++++++++%@", NSStringFromCGPoint(self.lastPoint));
+    switch (dirction) {
+        case DragCellDirectionLeft:{
+            //这里的动画必须设为NO
+            [self.originCollectionView setContentOffset:CGPointMake(self.originCollectionView.contentOffset.x - 4, self.originCollectionView.contentOffset.y) animated:NO];
+            self.tmpMoveView.center = CGPointMake(self.tmpMoveView.center.x - 4, self.tmpMoveView.center.y);
+            _lastPoint.x -= 4;
+        }
+            break;
+        case DragCellDirectionRight:{
+            [self.originCollectionView setContentOffset:CGPointMake(self.originCollectionView.contentOffset.x + 4, self.originCollectionView.contentOffset.y) animated:NO];
+            self.tmpMoveView.center = CGPointMake(self.tmpMoveView.center.x + 4, self.tmpMoveView.center.y);
+            _lastPoint.x += 4;
+        }
+            break;
+        case DragCellDirectionDown:{
+            [self.originCollectionView setContentOffset:CGPointMake(self.originCollectionView.contentOffset.x, self.originCollectionView.contentOffset.y - 4) animated:NO];
+            self.tmpMoveView.center = CGPointMake(self.tmpMoveView.center.x, self.tmpMoveView.center.y - 4);
+            _lastPoint.y -= 4;
+        }
+            break;
+        case DragCellDirectionUp:{
+            [self.originCollectionView setContentOffset:CGPointMake(self.originCollectionView.contentOffset.x, self.originCollectionView.contentOffset.y + 4) animated:NO];
+            self.tmpMoveView.center = CGPointMake(self.tmpMoveView.center.x, self.tmpMoveView.center.y + 4);
+            _lastPoint.y += 4;
+        }
+            break;
+            
+        default:
+            break;
+    }
+}
+
+- (DragCellDirection)getDragDirection {
+    if (self.originCollectionView.bounds.size.height + self.originCollectionView.contentOffset.y - self.tmpMoveView.center.y < self.tmpMoveView.bounds.size.height / 2 && self.originCollectionView.bounds.size.height + self.originCollectionView.contentOffset.y < self.originCollectionView.contentSize.height) {
+        return DragCellDirectionDown;
+    } else if (self.tmpMoveView.center.y - self.originCollectionView.contentOffset.y < self.tmpMoveView.bounds.size.height / 2 && self.originCollectionView.contentOffset.y > 0) {
+        return DragCellDirectionUp;
+    } else if (self.originCollectionView.bounds.size.width + self.originCollectionView.contentOffset.x - self.tmpMoveView.center.x < self.tmpMoveView.bounds.size.width / 2 && self.originCollectionView.bounds.size.width + self.originCollectionView.contentOffset.x < self.originCollectionView.contentSize.width) {
+        return DragCellDirectionRight;
+    } else if (self.tmpMoveView.center.x - self.originCollectionView.contentOffset.x < self.tmpMoveView.bounds.size.width / 2 && self.originCollectionView.contentOffset.x > 0) {
+        return DragCellDirectionLeft;
+    }
+    return DragCellDirectionNone;
 }
 
 
@@ -270,7 +367,12 @@ NSString *const collectionId = @"collectionId";
      */
     // 2.使用
     cell.backgroundColor = [UIColor greenColor];
-    cell.content = [NSString stringWithFormat:@"%ld", (long)indexPath.row];
+    cell.content = [NSString stringWithFormat:@"%@", self.tableData[collectionView.tag][indexPath.row]];
+    if (self.isDraging) {
+        cell.hidden = self.originIndexPath && self.originIndexPath.item == indexPath.item && self.originIndexPath.section == indexPath.section;
+    } else {
+        cell.hidden = NO;
+    }
     // 3.返回
     return cell;
     
@@ -299,4 +401,28 @@ NSString *const collectionId = @"collectionId";
         [self.tableData addObject:self.collectionData];
     }
 }
+
+#pragma mark - 更新数据
+- (void)updateSourceData {
+    NSMutableArray *changedArray = self.tableData[self.originCollectionView.tag].mutableCopy;
+    if (_currentIndexPath.section == _originIndexPath.section) {
+        NSMutableArray *orignalSection = changedArray;
+        if (_currentIndexPath.item > _originIndexPath.item) {
+            for (NSUInteger i = _originIndexPath.item; i < _currentIndexPath.item ; i ++) {
+                [orignalSection exchangeObjectAtIndex:i withObjectAtIndex:i + 1];
+            }
+        } else {
+            for (NSUInteger i = _originIndexPath.item; i > _currentIndexPath.item ; i --) {
+                [orignalSection exchangeObjectAtIndex:i withObjectAtIndex:i - 1];
+            }
+        }
+    } else {
+        NSMutableArray *orignalSection = changedArray[_originIndexPath.section];
+        NSMutableArray *currentSection = changedArray[_currentIndexPath.section];
+        [currentSection insertObject:orignalSection[_originIndexPath.item] atIndex:_currentIndexPath.item];
+        [orignalSection removeObjectAtIndex:_originIndexPath.item];
+    }
+    [self.tableData replaceObjectAtIndex:self.originCollectionView.tag withObject:changedArray];
+}
+
 @end
