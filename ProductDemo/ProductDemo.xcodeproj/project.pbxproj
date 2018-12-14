@@ -10,6 +10,7 @@
 		86B394A471ED7A17D0ECCBBC /* Pods_ProductDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55F2AD34BE73509EFACBCCD5 /* Pods_ProductDemo.framework */; };
 		F40519522134F7CB00310191 /* RoundedImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = F40519502134F7CB00310191 /* RoundedImageController.m */; };
 		F40519532134F7CB00310191 /* RoundedImageController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F40519512134F7CB00310191 /* RoundedImageController.xib */; };
+		F4067A9121C1CFC000EDD9E4 /* DragCollectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4067A9021C1CFC000EDD9E4 /* DragCollectionController.m */; };
 		F410488421A27CA700D2550E /* UIColor+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = F410488321A27CA700D2550E /* UIColor+Util.m */; };
 		F410488821A289C000D2550E /* ZDAlertUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = F410488721A289C000D2550E /* ZDAlertUtil.m */; };
 		F410CAA120D0AF92003C045A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F410CAA020D0AF92003C045A /* AppDelegate.m */; };
@@ -82,6 +83,8 @@
 		F405194F2134F7CB00310191 /* RoundedImageController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RoundedImageController.h; sourceTree = "<group>"; };
 		F40519502134F7CB00310191 /* RoundedImageController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RoundedImageController.m; sourceTree = "<group>"; };
 		F40519512134F7CB00310191 /* RoundedImageController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoundedImageController.xib; sourceTree = "<group>"; };
+		F4067A8F21C1CFC000EDD9E4 /* DragCollectionController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DragCollectionController.h; sourceTree = "<group>"; };
+		F4067A9021C1CFC000EDD9E4 /* DragCollectionController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DragCollectionController.m; sourceTree = "<group>"; };
 		F410488221A27CA700D2550E /* UIColor+Util.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Util.h"; sourceTree = "<group>"; };
 		F410488321A27CA700D2550E /* UIColor+Util.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Util.m"; sourceTree = "<group>"; };
 		F410488621A289C000D2550E /* ZDAlertUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZDAlertUtil.h; sourceTree = "<group>"; };
@@ -415,6 +418,8 @@
 				F4ED52012119703200ADDC04 /* cells */,
 				F428750721191BDC00502406 /* CollectionViewDemoController.h */,
 				F428750821191BDC00502406 /* CollectionViewDemoController.m */,
+				F4067A8F21C1CFC000EDD9E4 /* DragCollectionController.h */,
+				F4067A9021C1CFC000EDD9E4 /* DragCollectionController.m */,
 			);
 			path = CollectionViewAndEdit;
 			sourceTree = "<group>";
@@ -620,6 +625,7 @@
 				F410CAE520D0FA60003C045A /* DemoListViewController.m in Sources */,
 				F4DBE0EF20D2425C00106DC7 /* ZDPermissionContacts.m in Sources */,
 				F410CADB20D0C788003C045A /* NSString+Fmt.m in Sources */,
+				F4067A9121C1CFC000EDD9E4 /* DragCollectionController.m in Sources */,
 				F4341096213FB5D50082C13C /* UIView+ZDCategory.m in Sources */,
 				F4DBE0E620D238E900106DC7 /* ZDPermissionPhotos.m in Sources */,
 				F410CAAF20D0AF95003C045A /* main.m in Sources */,
