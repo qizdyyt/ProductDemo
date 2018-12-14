@@ -17,11 +17,12 @@ typedef NS_ENUM(NSUInteger, DragCellDirection) {
     DragCellDirectionDown,
 };
 
-@interface CollectionAndTable ()<UITableViewDelegate, UITableViewDataSource, UICollectionViewDelegate, UICollectionViewDataSource>
+@interface CollectionAndTable ()<UITableViewDelegate, UITableViewDataSource, UICollectionViewDelegate, UICollectionViewDataSource, UIScrollViewDelegate>
 
 @property (nonatomic, retain) UITableView *tableView;
 @property (nonatomic, retain) NSMutableArray *collectionData;
 @property (nonatomic, retain) NSMutableArray<NSMutableArray *> *tableData;
+@property (nonatomic, retain) NSMutableArray<NSValue *> *collectionOffsets;
 
 @property (nonatomic, retain) NSIndexPath *originCollectionIndexPath;
 @property (nonatomic, strong) NSIndexPath *currentCollectionIndexPath;
@@ -47,8 +48,6 @@ typedef NS_ENUM(NSUInteger, DragCellDirection) {
 
 @property (nonatomic, assign) CGFloat checkTimeInterval;
 @property (nonatomic, retain) NSDate *preStartMoveTime;
-@property (nonatomic, retain) NSDate *endMoveTime;
-
 @end
 
 @implementation CollectionAndTable
@@ -61,7 +60,7 @@ NSUInteger addTag = 2;
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
     [self initData];
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight * 0.6) style:UITableViewStylePlain];
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, ScreenWidth, ScreenHeight * 0.6) style:UITableViewStylePlain];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     [self.view addSubview:self.tableView];
@@ -117,7 +116,6 @@ NSUInteger addTag = 2;
         //设置是否需要弹簧效果
         collectionView.bounces = YES;
         collectionView.backgroundColor = [UIColor whiteColor];
-        collectionView.tag = indexPath.row + addTag;
         [cell.contentView addSubview:collectionView];
         if (@available(iOS 10.0, *)) {
             collectionView.prefetchingEnabled = NO;
@@ -127,8 +125,15 @@ NSUInteger addTag = 2;
         [collectionView registerClass:NSClassFromString(@"ZDCollectionViewCell") forCellWithReuseIdentifier:collectionId];
         
     }
-    
+    UICollectionView *collectionView = (UICollectionView *)(cell.contentView.subviews[0]);
+    collectionView.tag = indexPath.row + addTag;
+    [collectionView reloadData];
+    [collectionView setContentOffset:[self.collectionOffsets[indexPath.row] CGPointValue]];
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+//    UICollectionView *collectionView = (UICollectionView *)(cell.contentView.subviews[0]);
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -143,6 +148,7 @@ NSUInteger addTag = 2;
     return 100;
 }
 
+#pragma mark - gesture
 /**
  *  监听手势的改变
  */
@@ -366,6 +372,8 @@ NSUInteger addTag = 2;
         self.tmpMoveView = nil;
         cell.hidden = NO;
         self.originCollectionView.userInteractionEnabled = YES;
+        
+        [self.collectionOffsets replaceObjectAtIndex:self.originCollectionView.tag - addTag withObject:[NSValue valueWithCGPoint:self.originCollectionView.contentOffset]];
     }];
     
     self.originCollectionIndexPath = nil;
@@ -418,17 +426,19 @@ NSUInteger addTag = 2;
         }
             break;
         case DragCellDirectionDown:{
-//            [self.originCollectionView setContentOffset:CGPointMake(self.originCollectionView.contentOffset.x, self.originCollectionView.contentOffset.y - 4) animated:NO];
-//            self.tmpMoveView.center = CGPointMake(self.tmpMoveView.center.x, self.tmpMoveView.center.y - 4);
-//            _lastPoint.y -= 4;
-//            [self gestureChanged:self.longPressGesture];
+            if (self.tableView.contentOffset.y >= self.tableView.contentSize.height - self.tableView.frame.size.height) {
+                return;
+            }
+            [self.tableView setContentOffset:CGPointMake(self.tableView.contentOffset.x, self.tableView.contentOffset.y + 4) animated:NO];
+            [self gestureChanged:self.longPressGesture];
         }
             break;
         case DragCellDirectionUp:{
-//            [self.originCollectionView setContentOffset:CGPointMake(self.originCollectionView.contentOffset.x, self.originCollectionView.contentOffset.y + 4) animated:NO];
-//            self.tmpMoveView.center = CGPointMake(self.tmpMoveView.center.x, self.tmpMoveView.center.y + 4);
-//            _lastPoint.y += 4;
-//            [self gestureChanged:self.longPressGesture];
+            if (self.tableView.contentOffset.y <= 0) {
+                return;
+            }
+            [self.tableView setContentOffset:CGPointMake(self.tableView.contentOffset.x, self.tableView.contentOffset.y - 4) animated:NO];
+            [self gestureChanged:self.longPressGesture];
         }
             break;
 
@@ -439,10 +449,11 @@ NSUInteger addTag = 2;
 
 - (DragCellDirection)getDragDirection {
     CGFloat limitGap = self.tmpMoveView.frame.size.width * 0.75 * 0.5;
-    CGFloat gapTop = self.lastTablePoint.y;
-    CGFloat gapBottom = self.tableView.frame.size.height - self.lastTablePoint.y;
     CGFloat gapRight = self.tableView.frame.size.width - self.lastTablePoint.x;
     CGFloat gapLeft = self.lastTablePoint.x;
+    //此时lastTablePoint对应的是在TableView的ContentSize中的位置，需要计算
+    CGFloat gapBottom = self.tableView.frame.size.height - (self.lastTablePoint.y - self.tableView.contentOffset.y);
+    CGFloat gapTop = self.lastTablePoint.y - self.tableView.contentOffset.y;
     
     //要求超过四分之一，且触摸点距离左边的距离小于距离上边与下边的距离
     if (gapLeft < limitGap && gapLeft < gapTop && gapLeft < gapBottom) {
@@ -479,7 +490,13 @@ NSUInteger addTag = 2;
     cell.content = [NSString stringWithFormat:@"%@", self.tableData[collectionView.tag - addTag][indexPath.row]];
     if (self.isDraging) {
         if (self.originCollectionView.tag == self.currentCollectionView.tag) {
-            cell.hidden = self.currentCollectionIndexPath && self.currentCollectionIndexPath.item == indexPath.item && self.currentCollectionIndexPath.section == indexPath.section;
+            //修复上下拖动时cell不显示
+            if (collectionView.tag == self.currentCollectionView.tag) {
+                cell.hidden = self.currentCollectionIndexPath && self.currentCollectionIndexPath.item == indexPath.item && self.currentCollectionIndexPath.section == indexPath.section;
+            }else {
+                cell.hidden = NO;
+            }
+            
         }else {
             if (collectionView.tag == self.currentCollectionView.tag) {
                 cell.hidden = self.currentCollectionIndexPath && self.currentCollectionIndexPath.item == indexPath.item && self.currentCollectionIndexPath.section == indexPath.section;
@@ -487,6 +504,7 @@ NSUInteger addTag = 2;
                 cell.hidden = NO;
             }
         }
+//        NSLog(@"%ld, ----%ld, %ld, %@, %@", collectionView.tag, (long)self.originCollectionView.tag, self.currentCollectionView.tag, self.currentCollectionIndexPath, indexPath);
         
     } else {
         cell.hidden = NO;
@@ -500,24 +518,49 @@ NSUInteger addTag = 2;
 //    return YES;
 //}
 
-- (void)collectionView:(UICollectionView *)collectionView moveItemAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath {
-    id obj = [_collectionData objectAtIndex:sourceIndexPath.item];
-    [_collectionData removeObject:obj];
-    [_collectionData insertObject:obj atIndex:destinationIndexPath.item];
-    //    [self.collectionView performSelector:@selector(reloadData) withObject:nil afterDelay:0.5];
+//- (void)collectionView:(UICollectionView *)collectionView moveItemAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath {
+//    id obj = [_collectionData objectAtIndex:sourceIndexPath.item];
+//    [_collectionData removeObject:obj];
+//    [_collectionData insertObject:obj atIndex:destinationIndexPath.item];
+//    //    [self.collectionView performSelector:@selector(reloadData) withObject:nil afterDelay:0.5];
+//}
+
+#pragma mark - Scroll delegate
+//消耗太大
+//- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+//    if ([scrollView isKindOfClass:[UICollectionView class]]) {
+//        NSLog(@"%@", NSStringFromCGPoint(scrollView.contentOffset));
+//    }
+//}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    if ([scrollView isKindOfClass:[UICollectionView class]]) {
+//        NSLog(@"22222222222222%@", NSStringFromCGPoint(scrollView.contentOffset));
+        [self.collectionOffsets replaceObjectAtIndex:scrollView.tag - addTag withObject:[NSValue valueWithCGPoint:scrollView.contentOffset]];
+    }
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
+    if ([scrollView isKindOfClass:[UICollectionView class]]) {
+//        NSLog(@"33333333333333%@", NSStringFromCGPoint(scrollView.contentOffset));
+        [self.collectionOffsets replaceObjectAtIndex:scrollView.tag - addTag withObject:[NSValue valueWithCGPoint:scrollView.contentOffset]];
+    }
 }
 
 #pragma mark - 初始化数据
 - (void)initData {
     self.collectionData = [NSMutableArray array];
+    self.collectionOffsets = [NSMutableArray array];
     for (int i = 0; i < 15; i++) {
         [self.collectionData addObject:[NSString stringWithFormat:@"%d", i]];
     }
     
     self.tableData = [NSMutableArray array];
-    for (int i = 0; i < 5; i++) {
+    for (int i = 0; i < 15; i++) {
         [self.tableData addObject:self.collectionData];
+        [self.collectionOffsets addObject:[NSValue valueWithCGPoint:CGPointMake(0, 0)]];
     }
+    
 }
 
 #pragma mark - 更新数据
