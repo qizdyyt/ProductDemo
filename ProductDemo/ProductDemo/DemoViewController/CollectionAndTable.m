@@ -19,6 +19,13 @@ typedef NS_ENUM(NSUInteger, DragCellDirection) {
 
 @interface CollectionAndTable ()<UITableViewDelegate, UITableViewDataSource, UICollectionViewDelegate, UICollectionViewDataSource, UIScrollViewDelegate>
 
+@property (nonatomic, retain) UIView *tmpMoveView;
+@property (nonatomic, weak) UILongPressGestureRecognizer *longPressGesture;
+
+@property (nonatomic, retain) CADisplayLink *edgeTimer;
+@property (nonatomic, assign) CGPoint lastTablePoint; //最后的点击中心
+@property (nonatomic, assign) CGPoint lastCollectionPoint; //最后的点击中心
+
 @property (nonatomic, retain) UITableView *tableView;
 @property (nonatomic, retain) NSMutableArray *collectionData;
 @property (nonatomic, retain) NSMutableArray<NSMutableArray *> *tableData;
@@ -30,14 +37,6 @@ typedef NS_ENUM(NSUInteger, DragCellDirection) {
 
 @property (nonatomic, assign) CGPoint originCollectionPoint; //原始的点击中心
 @property (nonatomic, assign) CGPoint originTablePoint; //原始的点击中心
-
-
-@property (nonatomic, retain) UIView *tmpMoveView;
-@property (nonatomic, weak) UILongPressGestureRecognizer *longPressGesture;
-
-@property (nonatomic, retain) CADisplayLink *edgeTimer;
-@property (nonatomic, assign) CGPoint lastTablePoint; //最后的点击中心
-@property (nonatomic, assign) CGPoint lastCollectionPoint; //最后的点击中心
 @property (nonatomic) BOOL isDraging;
 
 @property (nonatomic, retain) NSIndexPath *oriTableIndex; //原始的在table的index
@@ -490,7 +489,7 @@ NSUInteger addTag = 2;
     cell.content = [NSString stringWithFormat:@"%@", self.tableData[collectionView.tag - addTag][indexPath.row]];
     if (self.isDraging) {
         if (self.originCollectionView.tag == self.currentCollectionView.tag) {
-            //修复上下拖动时cell不显示
+            //修复上下拖动时cell不显示, 不能只判断item
             if (collectionView.tag == self.currentCollectionView.tag) {
                 cell.hidden = self.currentCollectionIndexPath && self.currentCollectionIndexPath.item == indexPath.item && self.currentCollectionIndexPath.section == indexPath.section;
             }else {
