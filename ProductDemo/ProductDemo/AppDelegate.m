@@ -22,7 +22,7 @@
     
     DemoListViewController *viewController = [[DemoListViewController alloc] initWithNibName:@"DemoListViewController" bundle:nil];
     self.rootVC = [[UINavigationController alloc] initWithRootViewController:viewController];
-    
+    self.rootVC.navigationBar.translucent = NO;
     self.window.rootViewController = self.rootVC;
     [self.window makeKeyAndVisible];
     return YES;

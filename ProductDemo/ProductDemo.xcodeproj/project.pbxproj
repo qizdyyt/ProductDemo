@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E51966C224248BC00D0236B /* LayoutTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E51966B224248BC00D0236B /* LayoutTestController.m */; };
 		86B394A471ED7A17D0ECCBBC /* Pods_ProductDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55F2AD34BE73509EFACBCCD5 /* Pods_ProductDemo.framework */; };
 		F40519522134F7CB00310191 /* RoundedImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = F40519502134F7CB00310191 /* RoundedImageController.m */; };
 		F40519532134F7CB00310191 /* RoundedImageController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F40519512134F7CB00310191 /* RoundedImageController.xib */; };
@@ -77,6 +78,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2E51966A224248BC00D0236B /* LayoutTestController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LayoutTestController.h; sourceTree = "<group>"; };
+		2E51966B224248BC00D0236B /* LayoutTestController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LayoutTestController.m; sourceTree = "<group>"; };
 		55F2AD34BE73509EFACBCCD5 /* Pods_ProductDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProductDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C607F5E80749F71F436CBDDD /* Pods-ProductDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProductDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProductDemo/Pods-ProductDemo.release.xcconfig"; sourceTree = "<group>"; };
 		E6F20B51FD082465E4A14D38 /* Pods-ProductDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProductDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProductDemo/Pods-ProductDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -381,6 +384,8 @@
 				F42E2C8921AFB55F00BEAAE8 /* AttributedTextViewController.m */,
 				F435D88721BF32F30049460D /* CollectionAndTable.h */,
 				F435D88821BF32F30049460D /* CollectionAndTable.m */,
+				2E51966A224248BC00D0236B /* LayoutTestController.h */,
+				2E51966B224248BC00D0236B /* LayoutTestController.m */,
 			);
 			path = DemoViewController;
 			sourceTree = "<group>";
@@ -591,16 +596,18 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-ProductDemo/Pods-ProductDemo-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-ProductDemo/Pods-ProductDemo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ProductDemo/Pods-ProductDemo-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ProductDemo/Pods-ProductDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -618,6 +625,7 @@
 				F4225F2120F5CA1000114095 /* TransitionFirstViewController.m in Sources */,
 				F4DBE10A20D255CF00106DC7 /* ZDPermissionHealth.m in Sources */,
 				F43ADD5F20D384E0002DD68F /* TestPermissionViewController.m in Sources */,
+				2E51966C224248BC00D0236B /* LayoutTestController.m in Sources */,
 				F4225F2F20F5DBEF00114095 /* DismissTransition.m in Sources */,
 				F410CAE120D0C94E003C045A /* DeviceInfoUtil.m in Sources */,
 				F42E2C8A21AFB55F00BEAAE8 /* AttributedTextViewController.m in Sources */,
