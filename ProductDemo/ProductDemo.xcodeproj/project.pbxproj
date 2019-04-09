@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2E51966C224248BC00D0236B /* LayoutTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E51966B224248BC00D0236B /* LayoutTestController.m */; };
+		2ECE5A28225CCB720016233D /* FMDBUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ECE5A27225CCB720016233D /* FMDBUtil.m */; };
+		2ECE5A2B225CCBA90016233D /* FMDBDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ECE5A2A225CCBA90016233D /* FMDBDemoController.m */; };
 		86B394A471ED7A17D0ECCBBC /* Pods_ProductDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55F2AD34BE73509EFACBCCD5 /* Pods_ProductDemo.framework */; };
 		F40519522134F7CB00310191 /* RoundedImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = F40519502134F7CB00310191 /* RoundedImageController.m */; };
 		F40519532134F7CB00310191 /* RoundedImageController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F40519512134F7CB00310191 /* RoundedImageController.xib */; };
@@ -80,6 +82,10 @@
 /* Begin PBXFileReference section */
 		2E51966A224248BC00D0236B /* LayoutTestController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LayoutTestController.h; sourceTree = "<group>"; };
 		2E51966B224248BC00D0236B /* LayoutTestController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LayoutTestController.m; sourceTree = "<group>"; };
+		2ECE5A26225CCB720016233D /* FMDBUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMDBUtil.h; sourceTree = "<group>"; };
+		2ECE5A27225CCB720016233D /* FMDBUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMDBUtil.m; sourceTree = "<group>"; };
+		2ECE5A29225CCBA90016233D /* FMDBDemoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMDBDemoController.h; sourceTree = "<group>"; };
+		2ECE5A2A225CCBA90016233D /* FMDBDemoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMDBDemoController.m; sourceTree = "<group>"; };
 		55F2AD34BE73509EFACBCCD5 /* Pods_ProductDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProductDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C607F5E80749F71F436CBDDD /* Pods-ProductDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProductDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProductDemo/Pods-ProductDemo.release.xcconfig"; sourceTree = "<group>"; };
 		E6F20B51FD082465E4A14D38 /* Pods-ProductDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProductDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProductDemo/Pods-ProductDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -309,6 +315,8 @@
 				F4341088213FA0AC0082C13C /* Singleton.m */,
 				F410488221A27CA700D2550E /* UIColor+Util.h */,
 				F410488321A27CA700D2550E /* UIColor+Util.m */,
+				2ECE5A26225CCB720016233D /* FMDBUtil.h */,
+				2ECE5A27225CCB720016233D /* FMDBUtil.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -368,6 +376,8 @@
 		F43ADD5C20D384AC002DD68F /* DemoViewController */ = {
 			isa = PBXGroup;
 			children = (
+				2ECE5A29225CCBA90016233D /* FMDBDemoController.h */,
+				2ECE5A2A225CCBA90016233D /* FMDBDemoController.m */,
 				F434108D213FB4F00082C13C /* ZDCycleScrollView */,
 				F4ACF6AE2140C81400D1795C /* ZDCircleScrollController.h */,
 				F4ACF6AF2140C81400D1795C /* ZDCircleScrollController.m */,
@@ -598,11 +608,13 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-ProductDemo/Pods-ProductDemo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -629,6 +641,7 @@
 				F4225F2F20F5DBEF00114095 /* DismissTransition.m in Sources */,
 				F410CAE120D0C94E003C045A /* DeviceInfoUtil.m in Sources */,
 				F42E2C8A21AFB55F00BEAAE8 /* AttributedTextViewController.m in Sources */,
+				2ECE5A2B225CCBA90016233D /* FMDBDemoController.m in Sources */,
 				F4225F2420F5CA2F00114095 /* TransitionSecondViewController.m in Sources */,
 				F410CAE520D0FA60003C045A /* DemoListViewController.m in Sources */,
 				F4DBE0EF20D2425C00106DC7 /* ZDPermissionContacts.m in Sources */,
@@ -653,6 +666,7 @@
 				F4DBE0E320D238CB00106DC7 /* ZDPermissionManager.m in Sources */,
 				F4DBE10720D24E4000106DC7 /* ZDPermissionNet.m in Sources */,
 				F4225F2720F5CAC100114095 /* PresentTransition.m in Sources */,
+				2ECE5A28225CCB720016233D /* FMDBUtil.m in Sources */,
 				F410488821A289C000D2550E /* ZDAlertUtil.m in Sources */,
 				F4341090213FB53F0082C13C /* ZDCycleScrollView.m in Sources */,
 				F4DBE11020D2593900106DC7 /* ZDPermissionReminders.m in Sources */,

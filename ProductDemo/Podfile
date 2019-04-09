@@ -4,4 +4,6 @@ use_frameworks!
 target 'ProductDemo' do
 pod 'AFNetworking', '~> 3.0'
 pod 'Masonry', '~> 1.1.0'
+pod 'FMDB'
+
 end
