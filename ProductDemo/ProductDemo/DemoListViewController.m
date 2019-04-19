@@ -16,6 +16,7 @@
 #import "AttributedTextViewController.h"
 #import "CollectionAndTable.h"
 #import "LayoutTestController.h"
+#import "FileOperateController.h"
 
 #import "NSString+Fmt.h"
 
@@ -38,7 +39,7 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     
-    self.dataArray = [NSArray arrayWithObjects:@"测试权限", @"自定义跳转动画present、push", @"Collection轮播与Edit", @"图片圆角", @"单例模式", @"轮播图", @"多样式的字符串", @"tableView嵌套CollectionView", @"layout", nil];
+    self.dataArray = [NSArray arrayWithObjects:@"测试权限", @"自定义跳转动画present、push", @"Collection轮播与Edit", @"图片圆角", @"单例模式", @"轮播图", @"多样式的字符串", @"tableView嵌套CollectionView", @"layout", @"文件操作", nil];
     
     
     self.title = [self.title substringToIndex:[self.title length] - 3];
@@ -112,6 +113,12 @@
         case 8:
         {
             LayoutTestController *VC = [[LayoutTestController alloc] init];
+            [self.navigationController pushViewController:VC animated:YES];
+        }
+            break;
+        case 9:
+        {
+            FileOperateController *VC = [[FileOperateController alloc] init];
             [self.navigationController pushViewController:VC animated:YES];
         }
             break;
