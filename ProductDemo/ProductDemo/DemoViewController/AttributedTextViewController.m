@@ -21,6 +21,10 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     
+    
+    
+    
+    
 }
 
 
