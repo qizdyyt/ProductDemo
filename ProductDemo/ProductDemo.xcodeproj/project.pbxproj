@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		2E0652E5225C20BA005BFF54 /* FileOperateController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E0652E4225C20BA005BFF54 /* FileOperateController.m */; };
 		2E51966C224248BC00D0236B /* LayoutTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E51966B224248BC00D0236B /* LayoutTestController.m */; };
+		2EADFD3922D46616004011F5 /* LayoutCellTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EADFD3722D46616004011F5 /* LayoutCellTest.m */; };
+		2EADFD3A22D46616004011F5 /* LayoutCellTest.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EADFD3822D46616004011F5 /* LayoutCellTest.xib */; };
 		2ECE5A28225CCB720016233D /* FMDBUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ECE5A27225CCB720016233D /* FMDBUtil.m */; };
 		2ECE5A2B225CCBA90016233D /* FMDBDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ECE5A2A225CCBA90016233D /* FMDBDemoController.m */; };
 		86B394A471ED7A17D0ECCBBC /* Pods_ProductDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55F2AD34BE73509EFACBCCD5 /* Pods_ProductDemo.framework */; };
@@ -85,6 +87,9 @@
 		2E0652E4225C20BA005BFF54 /* FileOperateController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FileOperateController.m; sourceTree = "<group>"; };
 		2E51966A224248BC00D0236B /* LayoutTestController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LayoutTestController.h; sourceTree = "<group>"; };
 		2E51966B224248BC00D0236B /* LayoutTestController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LayoutTestController.m; sourceTree = "<group>"; };
+		2EADFD3622D46616004011F5 /* LayoutCellTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LayoutCellTest.h; sourceTree = "<group>"; };
+		2EADFD3722D46616004011F5 /* LayoutCellTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LayoutCellTest.m; sourceTree = "<group>"; };
+		2EADFD3822D46616004011F5 /* LayoutCellTest.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LayoutCellTest.xib; sourceTree = "<group>"; };
 		2ECE5A26225CCB720016233D /* FMDBUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMDBUtil.h; sourceTree = "<group>"; };
 		2ECE5A27225CCB720016233D /* FMDBUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMDBUtil.m; sourceTree = "<group>"; };
 		2ECE5A29225CCBA90016233D /* FMDBDemoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMDBDemoController.h; sourceTree = "<group>"; };
@@ -399,6 +404,9 @@
 				F435D88821BF32F30049460D /* CollectionAndTable.m */,
 				2E51966A224248BC00D0236B /* LayoutTestController.h */,
 				2E51966B224248BC00D0236B /* LayoutTestController.m */,
+				2EADFD3622D46616004011F5 /* LayoutCellTest.h */,
+				2EADFD3722D46616004011F5 /* LayoutCellTest.m */,
+				2EADFD3822D46616004011F5 /* LayoutCellTest.xib */,
 				2E0652E3225C20BA005BFF54 /* FileOperateController.h */,
 				2E0652E4225C20BA005BFF54 /* FileOperateController.m */,
 			);
@@ -565,6 +573,7 @@
 				F410CAA720D0AF92003C045A /* Main.storyboard in Resources */,
 				F4225F3320F5E26500114095 /* bg2.png in Resources */,
 				F410CAE620D0FA60003C045A /* DemoListViewController.xib in Resources */,
+				2EADFD3A22D46616004011F5 /* LayoutCellTest.xib in Resources */,
 				F42875052119185600502406 /* bg3.png in Resources */,
 				F4225F3120F5E26100114095 /* bg1.png in Resources */,
 			);
@@ -659,6 +668,7 @@
 				F40519522134F7CB00310191 /* RoundedImageController.m in Sources */,
 				F4DBE0E920D23CA400106DC7 /* ZDPermissionCamera.m in Sources */,
 				F4341089213FA0AC0082C13C /* Singleton.m in Sources */,
+				2EADFD3922D46616004011F5 /* LayoutCellTest.m in Sources */,
 				F4ED52042119705800ADDC04 /* ZDCollectionViewCell.m in Sources */,
 				F4DBE10D20D256D500106DC7 /* ZDPermissionLocation.m in Sources */,
 				F4341093213FB5670082C13C /* ZDCycleScrollCell.m in Sources */,

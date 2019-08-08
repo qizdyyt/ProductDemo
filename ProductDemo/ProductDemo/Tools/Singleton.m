@@ -16,11 +16,11 @@ static Singleton *_sharedSingleton = nil;
 //保证只分配一次存储空间
 +(instancetype)allocWithZone:(struct _NSZone *)zone
 {
-    // @synchronized(self) {
-    // if (_instance == nil) {
-    // _instance = [super allocWithZone:zone];
-    // }
-    // }
+//     @synchronized(self) {
+//     if (_instance == nil) {
+//     _instance = [super allocWithZone:zone];
+//     }
+//     }
     
     static dispatch_once_t onceToken;//效果一样
     dispatch_once(&onceToken, ^{
@@ -38,6 +38,10 @@ static Singleton *_sharedSingleton = nil;
     return [[self alloc]init];
 }
 
+- (instancetype)init {
+    [NSException raise:@"Can't use init" format:@"qweqweqwqweqweqwe"];
+    return nil;
+}
 
 
 

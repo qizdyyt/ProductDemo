@@ -43,6 +43,13 @@
     
     
     self.title = [self.title substringToIndex:[self.title length] - 3];
+    
+    NSDictionary *strDIc = [NSDictionary dictionaryWithObjectsAndKeys:@"1",@"1",@"2",@"2",@"3",@"3",@"4",@"4",@"5",@"5", nil];
+    NSArray *strArr = strDIc.allKeys;
+    //这里的字符串a就是copy类型的，修改a的值，不会影响数组中的数据
+    NSString *a = [strArr objectAtIndex:2];
+    a = @"123";
+    NSLog(@"%@, %@", a, strArr);
 }
 
 - (void)didReceiveMemoryWarning {
