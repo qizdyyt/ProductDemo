@@ -23,4 +23,6 @@
 
 @property (class, nonatomic, readonly) NSString *fontFileDirectoryPath;
 
+/*******    核心方法       *******/
++ (NSString *)readIconWithUnicodeStr:(NSString *)unicode;
 @end

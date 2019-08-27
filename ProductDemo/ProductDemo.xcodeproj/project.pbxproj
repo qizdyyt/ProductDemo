@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		2E0652E5225C20BA005BFF54 /* FileOperateController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E0652E4225C20BA005BFF54 /* FileOperateController.m */; };
+		2E0DF6792314D26A006C714E /* EMIcon(1).ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2E0DF6782314D26A006C714E /* EMIcon(1).ttf */; };
+		2E0DF67B2314D287006C714E /* EMIcon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2E0DF67A2314D287006C714E /* EMIcon.ttf */; };
+		2E0DF67E2314D4E7006C714E /* FontTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E0DF67D2314D4E7006C714E /* FontTestViewController.m */; };
 		2E51966C224248BC00D0236B /* LayoutTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E51966B224248BC00D0236B /* LayoutTestController.m */; };
 		2EADFD3922D46616004011F5 /* LayoutCellTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EADFD3722D46616004011F5 /* LayoutCellTest.m */; };
 		2EADFD3A22D46616004011F5 /* LayoutCellTest.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EADFD3822D46616004011F5 /* LayoutCellTest.xib */; };
@@ -85,6 +88,10 @@
 /* Begin PBXFileReference section */
 		2E0652E3225C20BA005BFF54 /* FileOperateController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileOperateController.h; sourceTree = "<group>"; };
 		2E0652E4225C20BA005BFF54 /* FileOperateController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FileOperateController.m; sourceTree = "<group>"; };
+		2E0DF6782314D26A006C714E /* EMIcon(1).ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EMIcon(1).ttf"; sourceTree = "<group>"; };
+		2E0DF67A2314D287006C714E /* EMIcon.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = EMIcon.ttf; sourceTree = "<group>"; };
+		2E0DF67C2314D4E7006C714E /* FontTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FontTestViewController.h; sourceTree = "<group>"; };
+		2E0DF67D2314D4E7006C714E /* FontTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FontTestViewController.m; sourceTree = "<group>"; };
 		2E51966A224248BC00D0236B /* LayoutTestController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LayoutTestController.h; sourceTree = "<group>"; };
 		2E51966B224248BC00D0236B /* LayoutTestController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LayoutTestController.m; sourceTree = "<group>"; };
 		2EADFD3622D46616004011F5 /* LayoutCellTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LayoutCellTest.h; sourceTree = "<group>"; };
@@ -219,6 +226,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E0DF6762314D24A006C714E /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				2E0DF6772314D25C006C714E /* Font */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		2E0DF6772314D25C006C714E /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				2E0DF6782314D26A006C714E /* EMIcon(1).ttf */,
+				2E0DF67A2314D287006C714E /* EMIcon.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
 		B7EADFAECE87E256A8E3EEEC /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -270,6 +294,7 @@
 		F410CA9E20D0AF92003C045A /* ProductDemo */ = {
 			isa = PBXGroup;
 			children = (
+				2E0DF6762314D24A006C714E /* Assets */,
 				F410488521A2898B00D2550E /* UIControlUtil */,
 				F410CAD520D0B569003C045A /* Category */,
 				F410CAD120D0B27C003C045A /* Tools */,
@@ -409,6 +434,8 @@
 				2EADFD3822D46616004011F5 /* LayoutCellTest.xib */,
 				2E0652E3225C20BA005BFF54 /* FileOperateController.h */,
 				2E0652E4225C20BA005BFF54 /* FileOperateController.m */,
+				2E0DF67C2314D4E7006C714E /* FontTestViewController.h */,
+				2E0DF67D2314D4E7006C714E /* FontTestViewController.m */,
 			);
 			path = DemoViewController;
 			sourceTree = "<group>";
@@ -567,11 +594,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				F410CAAC20D0AF95003C045A /* LaunchScreen.storyboard in Resources */,
+				2E0DF67B2314D287006C714E /* EMIcon.ttf in Resources */,
 				F40519532134F7CB00310191 /* RoundedImageController.xib in Resources */,
 				F42875042119185600502406 /* bg4.png in Resources */,
 				F410CAA920D0AF95003C045A /* Assets.xcassets in Resources */,
 				F410CAA720D0AF92003C045A /* Main.storyboard in Resources */,
 				F4225F3320F5E26500114095 /* bg2.png in Resources */,
+				2E0DF6792314D26A006C714E /* EMIcon(1).ttf in Resources */,
 				F410CAE620D0FA60003C045A /* DemoListViewController.xib in Resources */,
 				2EADFD3A22D46616004011F5 /* LayoutCellTest.xib in Resources */,
 				F42875052119185600502406 /* bg3.png in Resources */,
@@ -676,6 +705,7 @@
 				F410CAA120D0AF92003C045A /* AppDelegate.m in Sources */,
 				F428750921191BDC00502406 /* CollectionViewDemoController.m in Sources */,
 				F4ACF6B02140C81400D1795C /* ZDCircleScrollController.m in Sources */,
+				2E0DF67E2314D4E7006C714E /* FontTestViewController.m in Sources */,
 				F43D5392214643CB00449C2C /* ZDCircleScrollView_son.m in Sources */,
 				F410CADE20D0C8C0003C045A /* NSString+JudgeType.m in Sources */,
 				F4341086213F7B100082C13C /* UIImageView+RoundImage.m in Sources */,

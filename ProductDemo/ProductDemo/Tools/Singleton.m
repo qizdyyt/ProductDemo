@@ -38,10 +38,10 @@ static Singleton *_sharedSingleton = nil;
     return [[self alloc]init];
 }
 
-- (instancetype)init {
-    [NSException raise:@"Can't use init" format:@"qweqweqwqweqweqwe"];
-    return nil;
-}
+//- (instancetype)init {
+//    [NSException raise:@"Can't use init" format:@"qweqweqwqweqweqwe"];
+//    return nil;
+//}
 
 
 
