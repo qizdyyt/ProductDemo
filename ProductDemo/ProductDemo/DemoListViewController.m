@@ -18,6 +18,7 @@
 #import "LayoutTestController.h"
 #import "FileOperateController.h"
 #import "FontTestViewController.h"
+#import "FileTools.h"
 
 #import "NSString+Fmt.h"
 
@@ -51,6 +52,9 @@
     NSString *a = [strArr objectAtIndex:2];
     a = @"123";
     NSLog(@"%@, %@", a, strArr);
+    
+    NSString *docDir = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
+//    [FileTools showAllFileWithPath:docDir WithSuffix:@"jpg"];
 }
 
 - (void)didReceiveMemoryWarning {

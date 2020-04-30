@@ -78,11 +78,11 @@
     self.fontRef = defaultFont;
     if (self.def) {
         self.label.font = [UIFont fontWithName:@"EMIcon" size:16.1];
-        self.label.text = [IconUtil readIconWithUnicodeStr:@"e83d"];
+//        self.label.text = [IconUtil readIconWithUnicodeStr:@"e83d"];
     }else {
 //        self.label.font = [UIFont fontWithName:@"EMIcon" size:14];
         self.label.font = [UIFont fontWithName:@"EMIcon" size:16];
-        self.label.text = [IconUtil readIconWithUnicodeStr:@"e83d"];
+//        self.label.text = [IconUtil readIconWithUnicodeStr:@"e83d"];
     }
 }
 

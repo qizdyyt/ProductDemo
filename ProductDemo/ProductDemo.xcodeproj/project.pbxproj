@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2E0652E5225C20BA005BFF54 /* FileOperateController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E0652E4225C20BA005BFF54 /* FileOperateController.m */; };
+		2E0A0C61245B1A6400F789C7 /* FileTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E0A0C60245B1A6400F789C7 /* FileTools.m */; };
 		2E0DF6792314D26A006C714E /* EMIcon(1).ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2E0DF6782314D26A006C714E /* EMIcon(1).ttf */; };
 		2E0DF67B2314D287006C714E /* EMIcon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2E0DF67A2314D287006C714E /* EMIcon.ttf */; };
 		2E0DF67E2314D4E7006C714E /* FontTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E0DF67D2314D4E7006C714E /* FontTestViewController.m */; };
@@ -88,6 +89,8 @@
 /* Begin PBXFileReference section */
 		2E0652E3225C20BA005BFF54 /* FileOperateController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileOperateController.h; sourceTree = "<group>"; };
 		2E0652E4225C20BA005BFF54 /* FileOperateController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FileOperateController.m; sourceTree = "<group>"; };
+		2E0A0C5F245B1A6400F789C7 /* FileTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileTools.h; sourceTree = "<group>"; };
+		2E0A0C60245B1A6400F789C7 /* FileTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FileTools.m; sourceTree = "<group>"; };
 		2E0DF6782314D26A006C714E /* EMIcon(1).ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EMIcon(1).ttf"; sourceTree = "<group>"; };
 		2E0DF67A2314D287006C714E /* EMIcon.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = EMIcon.ttf; sourceTree = "<group>"; };
 		2E0DF67C2314D4E7006C714E /* FontTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FontTestViewController.h; sourceTree = "<group>"; };
@@ -350,6 +353,8 @@
 				F410488321A27CA700D2550E /* UIColor+Util.m */,
 				2ECE5A26225CCB720016233D /* FMDBUtil.h */,
 				2ECE5A27225CCB720016233D /* FMDBUtil.m */,
+				2E0A0C5F245B1A6400F789C7 /* FileTools.h */,
+				2E0A0C60245B1A6400F789C7 /* FileTools.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -690,6 +695,7 @@
 				2E0652E5225C20BA005BFF54 /* FileOperateController.m in Sources */,
 				F4DBE0EF20D2425C00106DC7 /* ZDPermissionContacts.m in Sources */,
 				F410CADB20D0C788003C045A /* NSString+Fmt.m in Sources */,
+				2E0A0C61245B1A6400F789C7 /* FileTools.m in Sources */,
 				F4067A9121C1CFC000EDD9E4 /* DragCollectionController.m in Sources */,
 				F4341096213FB5D50082C13C /* UIView+ZDCategory.m in Sources */,
 				F4DBE0E620D238E900106DC7 /* ZDPermissionPhotos.m in Sources */,
