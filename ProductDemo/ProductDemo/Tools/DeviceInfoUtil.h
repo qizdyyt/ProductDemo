@@ -10,4 +10,5 @@
 
 @interface DeviceInfoUtil : NSObject
 
++ (unsigned)getFreeDiskspacePrivate;
 @end
