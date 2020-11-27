@@ -95,4 +95,45 @@
     return paddedString;
 }
 
+
+- (NSString *)fmtLimitLength:(NSUInteger)length
+{
+    if (length >= self.length || length == 0) {
+        return self;
+    }
+    return [self substringToIndex:length];
+}
+
+
+- (NSUInteger)indexOfString:(NSString *)str {
+    NSRange range = [self rangeOfString:str];
+    return range.location;
+}
+
+- (NSUInteger)lastIndexOfString:(NSString *)str {
+    NSRange range = [self rangeOfString:str options:NSBackwardsSearch];
+    return range.location;
+}
+
+- (NSString *)substringFromIndex:(NSUInteger)fromIndex toIndex:(NSUInteger)toIndex {
+    if (toIndex <= fromIndex) {
+        return @"";
+    }
+    NSRange range = NSMakeRange(fromIndex, toIndex - fromIndex);
+    return [self substringWithRange:range];
+}
+
+- (NSString *)substringFromString:(NSString *)fromStr endString:(NSString *)endStr {
+    
+    NSUInteger fromIndex = [self rangeOfString:fromStr].location;
+    NSUInteger endIndex = [self rangeOfString:endStr options:NSBackwardsSearch].location + endStr.length;
+    
+    if (fromIndex == NSNotFound || endIndex == NSNotFound || endIndex <= fromIndex) {
+        return @"";
+    }
+    
+    NSRange range = NSMakeRange(fromIndex, endIndex);
+    return [self substringWithRange:range];
+}
+
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "FileOperateController.h"
+#import "DeviceInfoUtil.h"
 
 @interface FileOperateController ()
 
@@ -26,6 +27,9 @@
     [self.view addSubview:self.moveButton];
     [self filePath];
     [self.moveButton addTarget:self action:@selector(move) forControlEvents:UIControlEventTouchUpInside];
+    
+    [DeviceInfoUtil getFreeDiskspacePrivate];
+    
 }
 
 -(void)move{

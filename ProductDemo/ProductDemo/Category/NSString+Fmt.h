@@ -20,13 +20,17 @@
 ///nil, @"", null -> @"null"
 + (NSString *)Null2NullStr:(id)myVal;
 
-///是否为空字符串
+///是否为空字符串 nil/"null"/""/"Null"
 + (BOOL)isEmptyString:(NSString *)myVal;
 
 ///删除字符串中的emoji
 + (NSString *)MySQLUTF8Safe:(NSString *)aString;
 
+///左侧添加空格以对齐到某长度
 - (NSString *)EI_stringByPadRight:(NSUInteger)totalWidth;
-
+///右侧添加空格以对齐到某长度
 - (NSString *)EI_stringByPadLeft:(NSUInteger)totalWidth;
+
+///限制字符最大长度
+- (NSString *)fmtLimitLength:(NSUInteger)length;
 @end

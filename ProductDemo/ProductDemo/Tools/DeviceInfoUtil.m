@@ -15,10 +15,13 @@
 
 
 + (unsigned)getFreeDiskspacePrivate {
+    
+    //方法一：
     NSDictionary *atDict = [[NSFileManager defaultManager] attributesOfFileSystemForPath:@"/" error:NULL];
     unsigned freeSpace = [[atDict objectForKey:NSFileSystemFreeSize] unsignedIntValue];
-    NSLog(@"%s - Free Diskspace: %u bytes - %u MiB", __PRETTY_FUNCTION__, freeSpace, (freeSpace/1024)/1024);
+    NSLog(@"%s - Free Diskspace: %u bytes - %u MiB  -  %u GB", __PRETTY_FUNCTION__, freeSpace, (freeSpace/1024)/1024, ((freeSpace/1024)/1024)/1024);
     
+    //方法二：
     uint64_t totalSpace = 0;
     uint64_t totalFreeSpace = 0;
     NSError *error = nil;
@@ -30,13 +33,26 @@
         NSNumber *freeFileSystemSizeInBytes = [dictionary objectForKey:NSFileSystemFreeSize];
         totalSpace = [fileSystemSizeInBytes unsignedLongLongValue];
         totalFreeSpace = [freeFileSystemSizeInBytes unsignedLongLongValue];
-        NSLog(@"Memory Capacity of %llu MiB with %llu MiB Free memory available.", ((totalSpace/1024ll)/1024ll), ((totalFreeSpace/1024ll)/1024ll));
+        NSLog(@"******** Memory Capacity of %llu MiB with %llu MiB Free memory available.", ((totalSpace/1024ll)/1024ll), ((totalFreeSpace/1024ll)/1024ll));
+        NSLog(@"******** Memory Capacity of %llu GB with %llu GB Free memory available.", (((totalSpace/1024ll)/1024ll))/1024ll, (((totalFreeSpace/1024ll)/1024ll))/1024ll);
     } else {
         NSLog(@"Error Obtaining System Memory Info: Domain = %@, Code = %ld", [error domain], (long)[error code]);
     }
 
-    NSLog(@"%@", totalFreeSpace) ;
-    NSLog(@"%@", freeSpace) ;
+    
+    
+    //方法三：
+    NSURL *fileUrl = [NSURL fileURLWithPath:NSHomeDirectory()];
+    if (@available(iOS 11.0, *)) {
+        NSDictionary *spaceDict = [fileUrl resourceValuesForKeys:@[NSURLVolumeAvailableCapacityForImportantUsageKey] error:nil];
+        
+    } else {
+        
+    }
+    
+    
+    
+    
     return freeSpace;
 }
 

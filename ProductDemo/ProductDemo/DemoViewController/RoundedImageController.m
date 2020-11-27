@@ -74,10 +74,11 @@
             } else {
                 UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(imageV_x, 0, imageSize, imageSize)];
                 label.text = @"圆";
+                label.textAlignment = NSTextAlignmentCenter;
 
 //                一样会卡的死死的
 //                label.backgroundColor = [UIColor redColor];
-//                label.layer.cornerRadius = 10;
+//                label.layer.cornerRadius = cornerRadius;
 //                label.layer.masksToBounds = YES;
                 
                 //这种办法简单，且可以实现效果,不卡,推荐用这种

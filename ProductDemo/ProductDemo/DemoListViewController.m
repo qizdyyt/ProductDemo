@@ -53,7 +53,10 @@
     a = @"123";
     NSLog(@"%@, %@", a, strArr);
     
-    NSString *docDir = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
+    NSLog(@"%@", [a EI_stringByPadLeft:5]);//'  123'
+    NSLog(@"%@", [a EI_stringByPadRight:5]);//'123  '
+    
+//    NSString *docDir = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
 //    [FileTools showAllFileWithPath:docDir WithSuffix:@"jpg"];
 }
 
