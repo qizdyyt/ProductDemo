@@ -33,4 +33,13 @@
 
 ///限制字符最大长度
 - (NSString *)fmtLimitLength:(NSUInteger)length;
+
+///子字符串在字符串中位置
+- (NSUInteger)indexOfString:(NSString *)str;
+
+///最后一个子字符串在字符串中位置
+- (NSUInteger)lastIndexOfString:(NSString *)str;
+
+
+
 @end

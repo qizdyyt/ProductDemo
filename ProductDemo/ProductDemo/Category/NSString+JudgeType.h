@@ -10,4 +10,6 @@
 
 @interface NSString (JudgeType)
 
+- (BOOL)isEmail;
+- (BOOL)isNumber;
 @end

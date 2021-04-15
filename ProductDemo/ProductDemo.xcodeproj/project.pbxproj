@@ -15,6 +15,7 @@
 		2E51966C224248BC00D0236B /* LayoutTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E51966B224248BC00D0236B /* LayoutTestController.m */; };
 		2E934356253DC37D00F406FC /* Objc-Ori.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E934355253DC37D00F406FC /* Objc-Ori.m */; };
 		2EA3794625DC85D800231AB0 /* NSStringUseAndDisplayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EA3794525DC85D800231AB0 /* NSStringUseAndDisplayController.m */; };
+		2EA3795525DCB25E00231AB0 /* UIImage+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EA3795425DCB25E00231AB0 /* UIImage+Tools.m */; };
 		2EADFD3922D46616004011F5 /* LayoutCellTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EADFD3722D46616004011F5 /* LayoutCellTest.m */; };
 		2EADFD3A22D46616004011F5 /* LayoutCellTest.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EADFD3822D46616004011F5 /* LayoutCellTest.xib */; };
 		2ECE5A28225CCB720016233D /* FMDBUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ECE5A27225CCB720016233D /* FMDBUtil.m */; };
@@ -103,6 +104,8 @@
 		2E934355253DC37D00F406FC /* Objc-Ori.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Objc-Ori.m"; sourceTree = "<group>"; };
 		2EA3794425DC85D800231AB0 /* NSStringUseAndDisplayController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSStringUseAndDisplayController.h; sourceTree = "<group>"; };
 		2EA3794525DC85D800231AB0 /* NSStringUseAndDisplayController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSStringUseAndDisplayController.m; sourceTree = "<group>"; };
+		2EA3795325DCB25E00231AB0 /* UIImage+Tools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Tools.h"; sourceTree = "<group>"; };
+		2EA3795425DCB25E00231AB0 /* UIImage+Tools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Tools.m"; sourceTree = "<group>"; };
 		2EADFD3622D46616004011F5 /* LayoutCellTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LayoutCellTest.h; sourceTree = "<group>"; };
 		2EADFD3722D46616004011F5 /* LayoutCellTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LayoutCellTest.m; sourceTree = "<group>"; };
 		2EADFD3822D46616004011F5 /* LayoutCellTest.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LayoutCellTest.xib; sourceTree = "<group>"; };
@@ -392,6 +395,8 @@
 				F410CADA20D0C788003C045A /* NSString+Fmt.m */,
 				F410CADC20D0C8C0003C045A /* NSString+JudgeType.h */,
 				F410CADD20D0C8C0003C045A /* NSString+JudgeType.m */,
+				2EA3795325DCB25E00231AB0 /* UIImage+Tools.h */,
+				2EA3795425DCB25E00231AB0 /* UIImage+Tools.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -710,6 +715,7 @@
 				F434108C213FA21A0082C13C /* SingletonViewController.m in Sources */,
 				F435D88921BF32F30049460D /* CollectionAndTable.m in Sources */,
 				F4225F2120F5CA1000114095 /* TransitionFirstViewController.m in Sources */,
+				2EA3795525DCB25E00231AB0 /* UIImage+Tools.m in Sources */,
 				F4DBE10A20D255CF00106DC7 /* ZDPermissionHealth.m in Sources */,
 				F43ADD5F20D384E0002DD68F /* TestPermissionViewController.m in Sources */,
 				2E51966C224248BC00D0236B /* LayoutTestController.m in Sources */,
