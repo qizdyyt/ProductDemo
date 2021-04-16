@@ -9,12 +9,12 @@
 #import <UIKit/UIKit.h>
 
 
-//TEst
+//TEST
 
 @interface UIImage (Tools)
 
 
-
+- (UIImage *)waterMarkWithText:(NSString *)text;
 
 @end
 

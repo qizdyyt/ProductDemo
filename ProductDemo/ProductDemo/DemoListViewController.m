@@ -20,6 +20,7 @@
 #import "FontTestViewController.h"
 #import "FileTools.h"
 #import "NSStringUseAndDisplayController.h"
+#import "ImageToolDempViewController.h"
 
 #import "NSString+Fmt.h"
 
@@ -110,6 +111,9 @@
         [self.navigationController pushViewController:VC animated:YES];
     }else if ([method isEqualToString:@"字符串各种操作"]){
         NSStringUseAndDisplayController *VC = [[NSStringUseAndDisplayController alloc] init];
+        [self.navigationController pushViewController:VC animated:YES];
+    }else if ([method isEqualToString:@"图片各种处理：水印、分割、压缩等"]){
+        ImageToolDempViewController *VC = [[ImageToolDempViewController alloc] init];
         [self.navigationController pushViewController:VC animated:YES];
     }
 }

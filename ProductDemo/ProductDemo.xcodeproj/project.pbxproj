@@ -13,6 +13,11 @@
 		2E0DF67B2314D287006C714E /* EMIcon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2E0DF67A2314D287006C714E /* EMIcon.ttf */; };
 		2E0DF67E2314D4E7006C714E /* FontTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E0DF67D2314D4E7006C714E /* FontTestViewController.m */; };
 		2E51966C224248BC00D0236B /* LayoutTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E51966B224248BC00D0236B /* LayoutTestController.m */; };
+		2E5504562628FA0D00C38C2F /* ImageToolDempViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E5504552628FA0D00C38C2F /* ImageToolDempViewController.m */; };
+		2E6828462629560C00816B56 /* 1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2E6828422629560C00816B56 /* 1.jpeg */; };
+		2E6828472629560C00816B56 /* 2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2E6828432629560C00816B56 /* 2.jpeg */; };
+		2E6828482629560C00816B56 /* 4.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2E6828442629560C00816B56 /* 4.jpeg */; };
+		2E6828492629560C00816B56 /* 3.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2E6828452629560C00816B56 /* 3.jpeg */; };
 		2E934356253DC37D00F406FC /* Objc-Ori.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E934355253DC37D00F406FC /* Objc-Ori.m */; };
 		2EA3794625DC85D800231AB0 /* NSStringUseAndDisplayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EA3794525DC85D800231AB0 /* NSStringUseAndDisplayController.m */; };
 		2EA3795525DCB25E00231AB0 /* UIImage+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EA3795425DCB25E00231AB0 /* UIImage+Tools.m */; };
@@ -100,6 +105,12 @@
 		2E0DF67D2314D4E7006C714E /* FontTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FontTestViewController.m; sourceTree = "<group>"; };
 		2E51966A224248BC00D0236B /* LayoutTestController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LayoutTestController.h; sourceTree = "<group>"; };
 		2E51966B224248BC00D0236B /* LayoutTestController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LayoutTestController.m; sourceTree = "<group>"; };
+		2E5504542628FA0D00C38C2F /* ImageToolDempViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageToolDempViewController.h; sourceTree = "<group>"; };
+		2E5504552628FA0D00C38C2F /* ImageToolDempViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageToolDempViewController.m; sourceTree = "<group>"; };
+		2E6828422629560C00816B56 /* 1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpeg; sourceTree = "<group>"; };
+		2E6828432629560C00816B56 /* 2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpeg; sourceTree = "<group>"; };
+		2E6828442629560C00816B56 /* 4.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4.jpeg; sourceTree = "<group>"; };
+		2E6828452629560C00816B56 /* 3.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpeg; sourceTree = "<group>"; };
 		2E934354253DC37D00F406FC /* Objc-Ori.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Objc-Ori.h"; sourceTree = "<group>"; };
 		2E934355253DC37D00F406FC /* Objc-Ori.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Objc-Ori.m"; sourceTree = "<group>"; };
 		2EA3794425DC85D800231AB0 /* NSStringUseAndDisplayController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSStringUseAndDisplayController.h; sourceTree = "<group>"; };
@@ -376,8 +387,6 @@
 				F4341085213F7B100082C13C /* UIImageView+RoundImage.m */,
 				F4341087213FA0AC0082C13C /* Singleton.h */,
 				F4341088213FA0AC0082C13C /* Singleton.m */,
-				F410488221A27CA700D2550E /* UIColor+Util.h */,
-				F410488321A27CA700D2550E /* UIColor+Util.m */,
 				2ECE5A26225CCB720016233D /* FMDBUtil.h */,
 				2ECE5A27225CCB720016233D /* FMDBUtil.m */,
 				2E0A0C5F245B1A6400F789C7 /* FileTools.h */,
@@ -397,6 +406,8 @@
 				F410CADD20D0C8C0003C045A /* NSString+JudgeType.m */,
 				2EA3795325DCB25E00231AB0 /* UIImage+Tools.h */,
 				2EA3795425DCB25E00231AB0 /* UIImage+Tools.m */,
+				F410488221A27CA700D2550E /* UIColor+Util.h */,
+				F410488321A27CA700D2550E /* UIColor+Util.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -419,6 +430,10 @@
 		F4225F2820F5D37700114095 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				2E6828422629560C00816B56 /* 1.jpeg */,
+				2E6828432629560C00816B56 /* 2.jpeg */,
+				2E6828452629560C00816B56 /* 3.jpeg */,
+				2E6828442629560C00816B56 /* 4.jpeg */,
 				F42875032119185600502406 /* bg3.png */,
 				F42875022119185500502406 /* bg4.png */,
 				F4225F3020F5E26100114095 /* bg1.png */,
@@ -472,6 +487,8 @@
 				2E0DF67D2314D4E7006C714E /* FontTestViewController.m */,
 				2EA3794425DC85D800231AB0 /* NSStringUseAndDisplayController.h */,
 				2EA3794525DC85D800231AB0 /* NSStringUseAndDisplayController.m */,
+				2E5504542628FA0D00C38C2F /* ImageToolDempViewController.h */,
+				2E5504552628FA0D00C38C2F /* ImageToolDempViewController.m */,
 			);
 			path = DemoViewController;
 			sourceTree = "<group>";
@@ -629,16 +646,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E6828462629560C00816B56 /* 1.jpeg in Resources */,
 				F410CAAC20D0AF95003C045A /* LaunchScreen.storyboard in Resources */,
 				2E0DF67B2314D287006C714E /* EMIcon.ttf in Resources */,
 				F40519532134F7CB00310191 /* RoundedImageController.xib in Resources */,
 				F42875042119185600502406 /* bg4.png in Resources */,
 				F410CAA920D0AF95003C045A /* Assets.xcassets in Resources */,
+				2E6828472629560C00816B56 /* 2.jpeg in Resources */,
 				F410CAA720D0AF92003C045A /* Main.storyboard in Resources */,
 				F4225F3320F5E26500114095 /* bg2.png in Resources */,
 				2E0DF6792314D26A006C714E /* EMIcon(1).ttf in Resources */,
+				2E6828482629560C00816B56 /* 4.jpeg in Resources */,
 				F410CAE620D0FA60003C045A /* DemoListViewController.xib in Resources */,
 				2EADFD3A22D46616004011F5 /* LayoutCellTest.xib in Resources */,
+				2E6828492629560C00816B56 /* 3.jpeg in Resources */,
 				F42875052119185600502406 /* bg3.png in Resources */,
 				F4225F3120F5E26100114095 /* bg1.png in Resources */,
 			);
@@ -747,6 +768,7 @@
 				F4ACF6B02140C81400D1795C /* ZDCircleScrollController.m in Sources */,
 				2E0DF67E2314D4E7006C714E /* FontTestViewController.m in Sources */,
 				F43D5392214643CB00449C2C /* ZDCircleScrollView_son.m in Sources */,
+				2E5504562628FA0D00C38C2F /* ImageToolDempViewController.m in Sources */,
 				F410CADE20D0C8C0003C045A /* NSString+JudgeType.m in Sources */,
 				F4341086213F7B100082C13C /* UIImageView+RoundImage.m in Sources */,
 				F4DBE0E320D238CB00106DC7 /* ZDPermissionManager.m in Sources */,
