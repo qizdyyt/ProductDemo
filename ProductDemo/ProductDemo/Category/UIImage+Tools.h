@@ -14,8 +14,15 @@
 @interface UIImage (Tools)
 
 
-- (UIImage *)waterMarkWithText:(NSString *)text;
 
+- (UIImage *)waterMarkWithText:(NSString *)text;
+- (UIImage *)waterMarkWithText_New:(NSString *)text;
+- (UIImage *)waterMarkWithText_New2:(NSString *)text;
+
++ (UIImage *)combineImages:(NSArray *)imageArr;
++ (UIImage *)combineImagesNew:(NSArray *)imageArr;
++ (UIImage *)combineImagesVersion2:(NSArray *)imageArr;
++ (UIImage *)combineImagesVersion3:(NSArray *)imageArr withText:(NSArray *)textArr;
 @end
 
 

@@ -51,6 +51,13 @@
     
 //    NSString *docDir = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
 //    [FileTools showAllFileWithPath:docDir WithSuffix:@"jpg"];
+    
+    int m = 14;
+    int n = 5;
+    int res = m / n;
+    int res1 = m % n;
+    int ress = 3 / 3;
+    NSLog(@"%d     %d     %d", res, res1, ress);
 }
 
 - (void)didReceiveMemoryWarning {

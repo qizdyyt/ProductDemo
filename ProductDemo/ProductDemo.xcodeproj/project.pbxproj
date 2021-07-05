@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E014415262D0EDD0003FB03 /* bg5.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E014414262D0EDD0003FB03 /* bg5.png */; };
 		2E0652E5225C20BA005BFF54 /* FileOperateController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E0652E4225C20BA005BFF54 /* FileOperateController.m */; };
 		2E0A0C61245B1A6400F789C7 /* FileTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E0A0C60245B1A6400F789C7 /* FileTools.m */; };
 		2E0DF6792314D26A006C714E /* EMIcon(1).ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2E0DF6782314D26A006C714E /* EMIcon(1).ttf */; };
@@ -95,6 +96,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2E014414262D0EDD0003FB03 /* bg5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg5.png; sourceTree = "<group>"; };
 		2E0652E3225C20BA005BFF54 /* FileOperateController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileOperateController.h; sourceTree = "<group>"; };
 		2E0652E4225C20BA005BFF54 /* FileOperateController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FileOperateController.m; sourceTree = "<group>"; };
 		2E0A0C5F245B1A6400F789C7 /* FileTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileTools.h; sourceTree = "<group>"; };
@@ -438,6 +440,7 @@
 				F42875022119185500502406 /* bg4.png */,
 				F4225F3020F5E26100114095 /* bg1.png */,
 				F4225F3220F5E26500114095 /* bg2.png */,
+				2E014414262D0EDD0003FB03 /* bg5.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -649,6 +652,7 @@
 				2E6828462629560C00816B56 /* 1.jpeg in Resources */,
 				F410CAAC20D0AF95003C045A /* LaunchScreen.storyboard in Resources */,
 				2E0DF67B2314D287006C714E /* EMIcon.ttf in Resources */,
+				2E014415262D0EDD0003FB03 /* bg5.png in Resources */,
 				F40519532134F7CB00310191 /* RoundedImageController.xib in Resources */,
 				F42875042119185600502406 /* bg4.png in Resources */,
 				F410CAA920D0AF95003C045A /* Assets.xcassets in Resources */,

@@ -24,6 +24,7 @@
     return [self colorWithRed:red green:green blue:blue alpha:alpha];
 }
 
+//0-255
 + (UIColor *)colorFromR:(float)red g:(float)green b:(float)blue a:(float)alpha
 {
     return [self colorWithRed:red/255.0f green:green/255.0f blue:blue/255.0f alpha:alpha];
