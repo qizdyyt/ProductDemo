@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PopoverControllerControllerDemo">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UUm-ry-w3e">
+                    <rect key="frame" x="0.0" y="438" width="52" height="30"/>
+                    <state key="normal" title="Button1"/>
+                    <connections>
+                        <action selector="tap1:" destination="-1" eventType="touchUpInside" id="uGp-Ye-IdC"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ilx-1X-d2o">
+                    <rect key="frame" x="179.5" y="438" width="55" height="30"/>
+                    <state key="normal" title="Button2"/>
+                    <connections>
+                        <action selector="tap2:" destination="-1" eventType="touchUpInside" id="QpU-HX-HzY"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gLT-fE-JL9">
+                    <rect key="frame" x="359" y="438" width="55" height="30"/>
+                    <state key="normal" title="Button3"/>
+                    <connections>
+                        <action selector="tap3:" destination="-1" eventType="touchUpInside" id="J4N-nZ-mrY"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="gLT-fE-JL9" secondAttribute="trailing" id="5ci-61-5zL"/>
+                <constraint firstItem="gLT-fE-JL9" firstAttribute="centerY" secondItem="Q5M-cg-NOt" secondAttribute="centerY" id="Cza-46-deB"/>
+                <constraint firstItem="UUm-ry-w3e" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="Frz-ni-67O"/>
+                <constraint firstItem="ilx-1X-d2o" firstAttribute="centerX" secondItem="Q5M-cg-NOt" secondAttribute="centerX" id="bQe-EM-PT8"/>
+                <constraint firstItem="UUm-ry-w3e" firstAttribute="centerY" secondItem="Q5M-cg-NOt" secondAttribute="centerY" id="oW4-U9-CmK"/>
+                <constraint firstItem="ilx-1X-d2o" firstAttribute="centerY" secondItem="Q5M-cg-NOt" secondAttribute="centerY" id="zTM-c5-CCU"/>
+            </constraints>
+            <point key="canvasLocation" x="115.94202898550725" y="87.723214285714278"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		2E014415262D0EDD0003FB03 /* bg5.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E014414262D0EDD0003FB03 /* bg5.png */; };
+		2E0591392692BE0900049AA1 /* VersionCompatibleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E0591382692BE0900049AA1 /* VersionCompatibleController.m */; };
+		2E05913E2692D80F00049AA1 /* PopoverControllerControllerDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E05913C2692D80F00049AA1 /* PopoverControllerControllerDemo.m */; };
+		2E05913F2692D80F00049AA1 /* PopoverControllerControllerDemo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E05913D2692D80F00049AA1 /* PopoverControllerControllerDemo.xib */; };
+		2E0591432692D84300049AA1 /* PopoverDestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E0591412692D84300049AA1 /* PopoverDestController.m */; };
+		2E0591442692D84300049AA1 /* PopoverDestController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E0591422692D84300049AA1 /* PopoverDestController.xib */; };
 		2E0652E5225C20BA005BFF54 /* FileOperateController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E0652E4225C20BA005BFF54 /* FileOperateController.m */; };
 		2E0A0C61245B1A6400F789C7 /* FileTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E0A0C60245B1A6400F789C7 /* FileTools.m */; };
 		2E0DF6792314D26A006C714E /* EMIcon(1).ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2E0DF6782314D26A006C714E /* EMIcon(1).ttf */; };
@@ -97,6 +102,14 @@
 
 /* Begin PBXFileReference section */
 		2E014414262D0EDD0003FB03 /* bg5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg5.png; sourceTree = "<group>"; };
+		2E0591372692BE0900049AA1 /* VersionCompatibleController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VersionCompatibleController.h; sourceTree = "<group>"; };
+		2E0591382692BE0900049AA1 /* VersionCompatibleController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VersionCompatibleController.m; sourceTree = "<group>"; };
+		2E05913B2692D80F00049AA1 /* PopoverControllerControllerDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PopoverControllerControllerDemo.h; sourceTree = "<group>"; };
+		2E05913C2692D80F00049AA1 /* PopoverControllerControllerDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PopoverControllerControllerDemo.m; sourceTree = "<group>"; };
+		2E05913D2692D80F00049AA1 /* PopoverControllerControllerDemo.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopoverControllerControllerDemo.xib; sourceTree = "<group>"; };
+		2E0591402692D84300049AA1 /* PopoverDestController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PopoverDestController.h; sourceTree = "<group>"; };
+		2E0591412692D84300049AA1 /* PopoverDestController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PopoverDestController.m; sourceTree = "<group>"; };
+		2E0591422692D84300049AA1 /* PopoverDestController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopoverDestController.xib; sourceTree = "<group>"; };
 		2E0652E3225C20BA005BFF54 /* FileOperateController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileOperateController.h; sourceTree = "<group>"; };
 		2E0652E4225C20BA005BFF54 /* FileOperateController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FileOperateController.m; sourceTree = "<group>"; };
 		2E0A0C5F245B1A6400F789C7 /* FileTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileTools.h; sourceTree = "<group>"; };
@@ -251,6 +264,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E0591332692A01800049AA1 /* VersionCompatible */ = {
+			isa = PBXGroup;
+			children = (
+				2E05913A2692CF5300049AA1 /* PopoverController */,
+				2E0591372692BE0900049AA1 /* VersionCompatibleController.h */,
+				2E0591382692BE0900049AA1 /* VersionCompatibleController.m */,
+			);
+			path = VersionCompatible;
+			sourceTree = "<group>";
+		};
+		2E05913A2692CF5300049AA1 /* PopoverController */ = {
+			isa = PBXGroup;
+			children = (
+				2E05913B2692D80F00049AA1 /* PopoverControllerControllerDemo.h */,
+				2E05913C2692D80F00049AA1 /* PopoverControllerControllerDemo.m */,
+				2E05913D2692D80F00049AA1 /* PopoverControllerControllerDemo.xib */,
+				2E0591402692D84300049AA1 /* PopoverDestController.h */,
+				2E0591412692D84300049AA1 /* PopoverDestController.m */,
+				2E0591422692D84300049AA1 /* PopoverDestController.xib */,
+			);
+			path = PopoverController;
+			sourceTree = "<group>";
+		};
 		2E0DF6762314D24A006C714E /* Assets */ = {
 			isa = PBXGroup;
 			children = (
@@ -336,6 +372,7 @@
 		F410CA9E20D0AF92003C045A /* ProductDemo */ = {
 			isa = PBXGroup;
 			children = (
+				2E0591332692A01800049AA1 /* VersionCompatible */,
 				2E934353253DC30D00F406FC /* InterView */,
 				2E0DF6762314D24A006C714E /* Assets */,
 				F410488521A2898B00D2550E /* UIControlUtil */,
@@ -653,8 +690,10 @@
 				F410CAAC20D0AF95003C045A /* LaunchScreen.storyboard in Resources */,
 				2E0DF67B2314D287006C714E /* EMIcon.ttf in Resources */,
 				2E014415262D0EDD0003FB03 /* bg5.png in Resources */,
+				2E05913F2692D80F00049AA1 /* PopoverControllerControllerDemo.xib in Resources */,
 				F40519532134F7CB00310191 /* RoundedImageController.xib in Resources */,
 				F42875042119185600502406 /* bg4.png in Resources */,
+				2E0591442692D84300049AA1 /* PopoverDestController.xib in Resources */,
 				F410CAA920D0AF95003C045A /* Assets.xcassets in Resources */,
 				2E6828472629560C00816B56 /* 2.jpeg in Resources */,
 				F410CAA720D0AF92003C045A /* Main.storyboard in Resources */,
@@ -744,6 +783,7 @@
 				F4DBE10A20D255CF00106DC7 /* ZDPermissionHealth.m in Sources */,
 				F43ADD5F20D384E0002DD68F /* TestPermissionViewController.m in Sources */,
 				2E51966C224248BC00D0236B /* LayoutTestController.m in Sources */,
+				2E05913E2692D80F00049AA1 /* PopoverControllerControllerDemo.m in Sources */,
 				F4225F2F20F5DBEF00114095 /* DismissTransition.m in Sources */,
 				F410CAE120D0C94E003C045A /* DeviceInfoUtil.m in Sources */,
 				F42E2C8A21AFB55F00BEAAE8 /* AttributedTextViewController.m in Sources */,
@@ -772,10 +812,12 @@
 				F4ACF6B02140C81400D1795C /* ZDCircleScrollController.m in Sources */,
 				2E0DF67E2314D4E7006C714E /* FontTestViewController.m in Sources */,
 				F43D5392214643CB00449C2C /* ZDCircleScrollView_son.m in Sources */,
+				2E0591392692BE0900049AA1 /* VersionCompatibleController.m in Sources */,
 				2E5504562628FA0D00C38C2F /* ImageToolDempViewController.m in Sources */,
 				F410CADE20D0C8C0003C045A /* NSString+JudgeType.m in Sources */,
 				F4341086213F7B100082C13C /* UIImageView+RoundImage.m in Sources */,
 				F4DBE0E320D238CB00106DC7 /* ZDPermissionManager.m in Sources */,
+				2E0591432692D84300049AA1 /* PopoverDestController.m in Sources */,
 				F4DBE10720D24E4000106DC7 /* ZDPermissionNet.m in Sources */,
 				F4225F2720F5CAC100114095 /* PresentTransition.m in Sources */,
 				2ECE5A28225CCB720016233D /* FMDBUtil.m in Sources */,
